@@ -1,1 +1,522 @@
-{"type":"error","error":{"type":"api_error","message":"Internal server error"},"request_id":"req_011CZnjiuzA5HBgD8NTgDqXg"}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>横浜中華街 完全ガイド — YOKOHAMA GUIDE</title>
+<meta name="description" content="横浜中華街の食べ歩き・グルメ・関帝廟・アクセスを1ページで完全網羅。豚まん・小籠包から本格コース料理まで。">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&family=DM+Sans:wght@300;400;500;600&display=swap');
+:root{
+  --sky:#0ea5e9;--sky-light:#e0f2fe;--ocean:#0369a1;
+  --red:#dc2626;--red-light:#fee2e2;--red-dark:#7f1d1d;
+  --green:#10b981;--green-dark:#065f46;--green-light:#d1fae5;
+  --coral:#f97316;--sand:#fef3c7;
+  --white:#fff;--gray-light:#f1f5f9;--text:#0f172a;--muted:#64748b;
+  --shadow:0 4px 24px rgba(220,38,38,0.08);--shadow-lg:0 12px 48px rgba(220,38,38,0.14);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans','Noto Sans JP',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+img{max-width:100%;height:auto;display:block;}
+
+header{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(220,38,38,0.1);height:58px;display:flex;align-items:center;padding:0 24px;gap:16px;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
+.logo{font-family:'Playfair Display',serif;font-size:18px;font-weight:900;color:var(--ocean);text-decoration:none;}
+.logo em{color:var(--sky);font-style:normal;}
+.header-nav{display:flex;gap:2px;flex:1;justify-content:center;}
+.header-nav a{color:var(--muted);font-size:12px;font-weight:500;padding:5px 10px;border-radius:5px;text-decoration:none;transition:all 0.15s;white-space:nowrap;}
+.header-nav a:hover{background:var(--sky-light);color:var(--ocean);}
+.lang-sw{display:flex;gap:3px;flex-shrink:0;}
+.lb{font-size:10px;font-weight:700;padding:3px 7px;border:1px solid rgba(14,165,233,0.2);border-radius:4px;background:transparent;color:var(--muted);cursor:pointer;transition:all 0.15s;}
+.lb.active{background:var(--sky);color:white;border-color:var(--sky);}
+
+.hero{height:80vh;position:relative;display:flex;align-items:flex-end;overflow:hidden;margin-top:58px;}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(100,0,0,0.85) 0%,rgba(100,0,0,0.3) 55%,transparent 100%);}
+.hero-content{position:relative;z-index:1;padding:48px 48px;max-width:860px;width:100%;}
+.hero-bc{font-size:11px;color:rgba(255,255,255,0.55);margin-bottom:12px;letter-spacing:0.06em;}
+.hero-bc a{color:rgba(255,255,255,0.55);text-decoration:none;}
+.hero-tag{display:inline-block;background:var(--red);color:white;font-size:11px;font-weight:700;letter-spacing:0.1em;padding:4px 14px;border-radius:99px;margin-bottom:14px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(38px,7vw,68px);font-weight:900;color:white;line-height:1.0;margin-bottom:14px;text-shadow:0 2px 20px rgba(0,0,0,0.4);}
+.hero h1 em{color:#fca5a5;font-style:normal;}
+.hero-sub{font-size:15px;color:rgba(255,255,255,0.85);line-height:1.75;margin-bottom:28px;max-width:540px;}
+.hero-stats{display:flex;gap:14px;flex-wrap:wrap;}
+.hs{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);backdrop-filter:blur(8px);border-radius:10px;padding:10px 18px;text-align:center;}
+.hs-val{font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:white;display:block;}
+.hs-label{font-size:10px;color:rgba(255,255,255,0.6);letter-spacing:0.06em;}
+
+.page-nav{background:white;border-bottom:2px solid var(--gray-light);position:sticky;top:58px;z-index:90;overflow-x:auto;}
+.page-nav-inner{max-width:1200px;margin:0 auto;display:flex;}
+.pn{padding:13px 20px;font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap;transition:all 0.15s;display:block;}
+.pn:hover,.pn.active{color:var(--red);border-bottom-color:var(--red);}
+
+section{padding:64px 24px;}
+.container{max-width:1200px;margin:0 auto;}
+.s-tag{font-size:11px;font-weight:700;letter-spacing:0.12em;color:var(--red);text-transform:uppercase;margin-bottom:8px;}
+.s-title{font-family:'Playfair Display',serif;font-size:clamp(24px,4vw,36px);font-weight:900;color:var(--text);line-height:1.2;margin-bottom:12px;}
+.s-title em{color:var(--red);font-style:normal;}
+.s-desc{font-size:14px;color:var(--muted);line-height:1.8;max-width:640px;}
+
+/* 横長セクション */
+.hl-row{padding:52px 0;}
+.hl-row-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;max-width:1200px;margin:0 auto;padding:0 24px;}
+.hl-row-reverse{direction:rtl;}
+.hl-row-reverse>*{direction:ltr;}
+.hl-row-img{border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);}
+.hl-row-img img{width:100%;height:360px;object-fit:cover;transition:transform 0.5s;}
+.hl-row-img:hover img{transform:scale(1.03);}
+.hl-row-num{font-family:'Playfair Display',serif;font-size:56px;font-weight:900;color:var(--red-light);line-height:1;margin-bottom:4px;}
+.hl-row-icon{font-size:32px;margin-bottom:8px;display:block;}
+.hl-row-name{font-family:'Playfair Display',serif;font-size:clamp(20px,2.5vw,26px);font-weight:900;color:var(--text);margin-bottom:14px;line-height:1.2;}
+.hl-row-desc{font-size:14px;color:#334155;line-height:1.85;margin-bottom:20px;}
+.hl-row-meta{display:flex;flex-direction:column;gap:7px;margin-bottom:20px;}
+.hl-meta-item{font-size:12px;color:var(--muted);}
+.hl-row-link{display:inline-flex;align-items:center;gap:6px;color:var(--red);font-size:13px;font-weight:700;padding:9px 18px;border-radius:8px;text-decoration:none;border:2px solid var(--red);transition:all 0.2s;}
+.hl-row-link:hover{background:var(--red);color:white;transform:translateY(-2px);}
+
+/* グルメ */
+.gourmet-section{background:white;}
+.price-guide{background:linear-gradient(135deg,var(--red-dark),var(--red));border-radius:14px;padding:28px;color:white;margin-bottom:32px;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.pg-item{text-align:center;}
+.pg-range{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;display:block;margin-bottom:4px;}
+.pg-label{font-size:12px;opacity:0.8;}
+.pg-desc{font-size:11px;opacity:0.7;margin-top:4px;}
+.gourmet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.g-card{border-radius:12px;overflow:hidden;box-shadow:var(--shadow);background:white;transition:all 0.2s;}
+.g-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+.g-img{height:150px;overflow:hidden;}
+.g-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s;}
+.g-card:hover .g-img img{transform:scale(1.06);}
+.g-body{padding:14px;}
+.g-type{font-size:10px;font-weight:700;letter-spacing:0.1em;color:var(--red);text-transform:uppercase;margin-bottom:4px;}
+.g-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.g-desc{font-size:11px;color:var(--muted);line-height:1.7;margin-bottom:6px;}
+.g-price{font-size:12px;color:var(--coral);font-weight:700;}
+
+/* アクセス */
+.ac-section{background:var(--gray-light);}
+.ac-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;}
+.ac-map iframe{width:100%;height:340px;border:0;display:block;border-radius:14px;box-shadow:var(--shadow-lg);}
+.ac-cards{display:flex;flex-direction:column;gap:14px;}
+.ac-card{background:white;border-radius:12px;padding:18px 20px;box-shadow:var(--shadow);}
+.ac-card-title{font-size:14px;font-weight:700;color:var(--ocean);margin-bottom:10px;display:flex;align-items:center;gap:7px;}
+.ac-row{display:flex;gap:8px;padding:7px 0;border-bottom:1px solid var(--gray-light);}
+.ac-row:last-child{border:none;}
+.ac-dot{width:7px;height:7px;border-radius:50%;background:var(--red);flex-shrink:0;margin-top:5px;}
+.ac-text{font-size:12px;color:var(--muted);line-height:1.6;}
+.ac-time{font-size:11px;color:var(--red);font-weight:700;display:block;margin-top:2px;}
+
+/* tips */
+.tips-section{background:white;}
+.tips-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px;}
+.tip{background:var(--red-light);border-radius:12px;padding:18px;text-align:center;}
+.tip-icon{font-size:28px;margin-bottom:8px;display:block;}
+.tip-title{font-size:12px;font-weight:700;color:var(--red-dark);margin-bottom:4px;}
+.tip-desc{font-size:11px;color:#6b2222;line-height:1.65;}
+
+/* ad */
+.ad-box{background:var(--sand);border:1px solid rgba(249,115,22,0.2);border-radius:12px;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;margin:24px 0;flex-wrap:wrap;}
+.ad-label{font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;}
+.ad-text{font-size:14px;font-weight:600;color:var(--text);}
+.ad-btn{background:var(--coral);color:white;font-size:13px;font-weight:700;padding:9px 20px;border-radius:99px;text-decoration:none;transition:all 0.15s;white-space:nowrap;}
+.ad-btn:hover{opacity:0.88;transform:translateY(-1px);}
+
+/* 実用情報 */
+.info-section{background:var(--gray-light);}
+.info-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:28px;}
+.info-card{background:white;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+.info-head{background:var(--red-dark);color:white;padding:14px 18px;font-size:13px;font-weight:700;}
+.info-body{padding:14px 18px;}
+.info-row{display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--gray-light);font-size:12px;gap:8px;}
+.info-row:last-child{border:none;}
+.info-key{color:var(--muted);flex-shrink:0;}
+.info-val{font-weight:600;color:var(--text);text-align:right;}
+
+footer{background:#0f172a;color:rgba(255,255,255,0.6);padding:40px 24px 24px;text-align:center;}
+.footer-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:white;margin-bottom:10px;}
+.footer-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);font-size:13px;font-weight:500;padding:8px 18px;border-radius:99px;text-decoration:none;margin-bottom:20px;transition:all 0.15s;}
+.footer-back:hover{background:rgba(255,255,255,0.15);color:white;}
+.footer-bottom{font-size:11px;color:rgba(255,255,255,0.3);border-top:1px solid rgba(255,255,255,0.08);padding-top:14px;margin-top:16px;}
+
+@media(max-width:900px){
+  .hl-row-inner{grid-template-columns:1fr;gap:24px;}
+  .hl-row-reverse{direction:ltr;}
+  .hl-row-img img{height:240px;}
+  .gourmet-grid{grid-template-columns:1fr 1fr;}
+  .ac-grid{grid-template-columns:1fr;}
+  .tips-grid{grid-template-columns:1fr 1fr;}
+  .info-grid{grid-template-columns:1fr 1fr;}
+  .price-guide{grid-template-columns:1fr;}
+  .header-nav{display:none;}
+  .hero-content{padding:32px 20px;}
+}
+@media(max-width:600px){
+  .gourmet-grid{grid-template-columns:1fr;}
+  .info-grid{grid-template-columns:1fr;}
+  .tips-grid{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">YOKO<em>HAMA</em></a>
+  <nav class="header-nav">
+    <a href="#highlights">見どころ</a>
+    <a href="#gourmet">グルメ</a>
+    <a href="#access">アクセス</a>
+    <a href="#tips">観光のコツ</a>
+    <a href="#info">実用情報</a>
+    <a href="expo.html" style="color:var(--green);font-weight:700;">🌸 花博2027</a>
+  </nav>
+  <div class="lang-sw">
+    <button class="lb active" onclick="setLang('ja',this)">JA</button>
+    <button class="lb" onclick="setLang('en',this)">EN</button>
+    <button class="lb" onclick="setLang('zh',this)">中文</button>
+    <button class="lb" onclick="setLang('ko',this)">한국어</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1529921725089-e25882771425?w=1800&auto=format&fit=crop&q=85" alt="横浜中華街">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-bc"><a href="index.html">YOKOHAMA GUIDE</a> › 中華街</div>
+    <div class="hero-tag">CHINATOWN · 横浜中華街</div>
+    <h1>横浜<em>中華街</em><br>完全ガイド</h1>
+    <p class="hero-sub">日本最大の中華街。600店以上が軒を連ねる食の聖地。食べ歩きから本格コース料理まで、見どころ・グルメ・アクセスを1ページで完全網羅。</p>
+    <div class="hero-stats">
+      <div class="hs"><span class="hs-val">600+</span><span class="hs-label">飲食店数</span></div>
+      <div class="hs"><span class="hs-val">徒歩すぐ</span><span class="hs-label">元町・中華街駅</span></div>
+      <div class="hs"><span class="hs-val">10〜22時</span><span class="hs-label">営業時間目安</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE NAV -->
+<div class="page-nav">
+  <div class="page-nav-inner">
+    <a href="#highlights" class="pn active">🏮 見どころ</a>
+    <a href="#gourmet" class="pn">🥢 グルメガイド</a>
+    <a href="#access" class="pn">🚃 アクセス</a>
+    <a href="#tips" class="pn">💡 観光のコツ</a>
+    <a href="#info" class="pn">ℹ️ 実用情報</a>
+  </div>
+</div>
+
+<!-- ===== 見どころ ===== -->
+<section style="background:white;padding:56px 24px 0;" id="highlights">
+  <div class="container">
+    <div class="s-tag">HIGHLIGHTS</div>
+    <h2 class="s-title">中華街の<em>見どころ</em></h2>
+    <p class="s-desc">食べ歩きだけじゃない！歴史ある廟・10基の牌楼・季節イベントなど、エキゾチックな横浜中華街の魅力を余さずご紹介します。</p>
+  </div>
+</section>
+
+<div class="hl-row" style="background:white;">
+  <div class="hl-row-inner">
+    <div class="hl-row-img">
+      <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?w=800&auto=format&fit=crop&q=80" alt="食べ歩き" loading="lazy">
+    </div>
+    <div class="hl-row-body">
+      <div class="hl-row-num">01</div>
+      <span class="hl-row-icon">🥟</span>
+      <h3 class="hl-row-name">食べ歩きグルメ</h3>
+      <p class="hl-row-desc">豚まん・小籠包・肉まん・杏仁豆腐・タピオカ…中華街名物を食べ歩きしながら散策するのが定番スタイルです。各店で個性豊かな味が楽しめ、食べ比べも醍醐味のひとつ。週末の昼間は行列ができる人気店も多いので、午前中の早い時間帯がおすすめです。</p>
+      <div class="hl-row-meta">
+        <span class="hl-meta-item">💰 1品¥300〜500程度 / 合計¥1,000〜2,000でたっぷり食べ歩き可能</span>
+        <span class="hl-meta-item">💡 江戸清・皇朝などの有名店は行列必至。周辺の穴場店も狙い目</span>
+        <span class="hl-meta-item">🕐 混雑が少ない平日午前中がベスト</span>
+      </div>
+      <a href="https://www.chinatown.or.jp/" target="_blank" rel="noopener" class="hl-row-link">中華街公式サイト →</a>
+    </div>
+  </div>
+</div>
+
+<div class="hl-row" style="background:var(--gray-light);">
+  <div class="hl-row-inner hl-row-reverse">
+    <div class="hl-row-img">
+      <img src="https://images.unsplash.com/photo-1613296398917-1f230ab9aa9e?w=800&auto=format&fit=crop&q=80" alt="関帝廟" loading="lazy">
+    </div>
+    <div class="hl-row-body">
+      <div class="hl-row-num">02</div>
+      <span class="hl-row-icon">🏯</span>
+      <h3 class="hl-row-name">関帝廟・媽祖廟</h3>
+      <p class="hl-row-desc">三国志の英雄・関羽を祀る「横浜関帝廟」は横浜中華街最古の中国寺院。色鮮やかな装飾と荘厳な雰囲気が漂い、参拝も可能です。近くには縁結びや海の守護神として信仰される「横浜媽祖廟」もあり、あわせて訪れると中国文化の深さを体感できます。</p>
+      <div class="hl-row-meta">
+        <span class="hl-meta-item">💰 拝観料無料（賽銭自由）</span>
+        <span class="hl-meta-item">🕐 9:00〜19:00（季節・行事により変動）</span>
+        <span class="hl-meta-item">📍 中華街大通りから徒歩2分</span>
+      </div>
+      <a href="https://www.yokohama-kanteibyo.com/" target="_blank" rel="noopener" class="hl-row-link">関帝廟公式サイト →</a>
+    </div>
+  </div>
+</div>
+
+<div class="hl-row" style="background:white;">
+  <div class="hl-row-inner">
+    <div class="hl-row-img">
+      <img src="https://images.unsplash.com/photo-1529921879218-f99546d03a9d?w=800&auto=format&fit=crop&q=80" alt="牌楼" loading="lazy">
+    </div>
+    <div class="hl-row-body">
+      <div class="hl-row-num">03</div>
+      <span class="hl-row-icon">🏮</span>
+      <h3 class="hl-row-name">10基の牌楼（中国式の門）</h3>
+      <p class="hl-row-desc">中華街の入り口に立つ中国式の門「牌楼（パイロウ）」は全部で10基。朱雀門・延平門・玄武門・白虎門・青竜門など、東西南北の方角と意味に対応した門が設置されています。赤・金・緑の鮮やかな色彩がフォトスポットとして大人気。特に善隣門（朝陽門）は中華街の代表的な正門です。</p>
+      <div class="hl-row-meta">
+        <span class="hl-meta-item">💰 見学無料</span>
+        <span class="hl-meta-item">📸 撮影スポットとして特に人気。朝・夕方がきれいに撮れる</span>
+        <span class="hl-meta-item">📍 中華街の各入り口に設置</span>
+      </div>
+      <a href="https://www.chinatown.or.jp/sightseeing/pailou/" target="_blank" rel="noopener" class="hl-row-link">牌楼マップを見る →</a>
+    </div>
+  </div>
+</div>
+
+<div class="hl-row" style="background:var(--gray-light);">
+  <div class="hl-row-inner hl-row-reverse">
+    <div class="hl-row-img">
+      <img src="https://images.unsplash.com/photo-1700580910155-4b6c5e8fe6ea?w=800&auto=format&fit=crop&q=80" alt="春節" loading="lazy">
+    </div>
+    <div class="hl-row-body">
+      <div class="hl-row-num">04</div>
+      <span class="hl-row-icon">🐉</span>
+      <h3 class="hl-row-name">春節・季節イベント</h3>
+      <p class="hl-row-desc">旧正月（1〜2月）の春節は中華街最大のイベント。龍舞・獅子舞・爆竹が街を彩り、中華文化を全力で体感できます。秋の「横浜中華街食祭」では普段食べられない本場の料理が並び食の祭典に。そのほかランタンフェスティバルなど年間を通じて賑やかなイベントが開催されます。</p>
+      <div class="hl-row-meta">
+        <span class="hl-meta-item">🎉 春節（旧正月）：例年1〜2月頃</span>
+        <span class="hl-meta-item">🎉 食祭：例年10月頃</span>
+        <span class="hl-meta-item">💡 イベント時は特に混雑。早めの到着がおすすめ</span>
+      </div>
+      <a href="https://www.chinatown.or.jp/event/" target="_blank" rel="noopener" class="hl-row-link">イベント情報を見る →</a>
+    </div>
+  </div>
+</div>
+
+<!-- AD -->
+<div style="padding:0 24px;max-width:1200px;margin:0 auto;">
+  <div class="ad-box">
+    <span class="ad-label">PR</span>
+    <span class="ad-text">中華街周辺のホテルをお得に予約</span>
+    <a href="https://hb.afl.rakuten.co.jp/hgc/529afa60.a8148527.529afa61.54d7ba9c/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" class="ad-btn">楽天トラベルで探す →</a>
+  </div>
+</div>
+
+<!-- ===== グルメ ===== -->
+<section class="gourmet-section" id="gourmet">
+  <div class="container">
+    <div class="s-tag">GOURMET GUIDE</div>
+    <h2 class="s-title">中華街<em>グルメガイド</em></h2>
+    <p class="s-desc">食べ歩きから本格コース料理まで。予算・シーン別に選べる中華街のグルメを完全ガイド。</p>
+
+    <div class="price-guide" style="margin-top:24px;">
+      <div class="pg-item">
+        <span class="pg-range">¥300〜1,000</span>
+        <div class="pg-label">食べ歩きコース</div>
+        <div class="pg-desc">豚まん・小籠包・スイーツなど</div>
+      </div>
+      <div class="pg-item">
+        <span class="pg-range">¥1,000〜2,500</span>
+        <div class="pg-label">ランチ・1品料理</div>
+        <div class="pg-desc">ラーメン・点心・セットランチ</div>
+      </div>
+      <div class="pg-item">
+        <span class="pg-range">¥4,000〜</span>
+        <div class="pg-label">本格コース料理</div>
+        <div class="pg-desc">広東・上海・北京料理 要予約</div>
+      </div>
+    </div>
+
+    <div class="gourmet-grid">
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1625938144755-652e9e8fafda?w=500&auto=format&fit=crop&q=80" alt="豚まん" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">食べ歩き</div>
+          <div class="g-name">豚まん・肉まん</div>
+          <div class="g-desc">中華街の定番。江戸清や皇朝など有名店のジューシーな豚まんは必食。</div>
+          <div class="g-price">¥300〜500</div>
+        </div>
+      </div>
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=500&auto=format&fit=crop&q=80" alt="小籠包" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">食べ歩き</div>
+          <div class="g-name">小籠包・焼売</div>
+          <div class="g-desc">スープたっぷりの小籠包と蒸したての焼売。テイクアウトから店内まで楽しめる。</div>
+          <div class="g-price">¥400〜600</div>
+        </div>
+      </div>
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&auto=format&fit=crop&q=80" alt="中国茶" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">カフェ・お茶</div>
+          <div class="g-name">本格中国茶・スイーツ</div>
+          <div class="g-desc">鉄観音・プーアル・ジャスミン茶と杏仁豆腐・マンゴープリンのセット。</div>
+          <div class="g-price">¥800〜1,500</div>
+        </div>
+      </div>
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=500&auto=format&fit=crop&q=80" alt="広東料理" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">コース料理</div>
+          <div class="g-name">広東・上海料理コース</div>
+          <div class="g-desc">海老チリ・フカヒレ・北京ダックなど本格派料理が揃う老舗レストランで特別な食事を。</div>
+          <div class="g-price">¥4,000〜8,000</div>
+        </div>
+      </div>
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=500&auto=format&fit=crop&q=80" alt="ラーメン" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">ランチ</div>
+          <div class="g-name">横浜中華そば</div>
+          <div class="g-desc">醤油ベースの細麺スープが横浜ラーメンのルーツ。老舗で本場の味を体験。</div>
+          <div class="g-price">¥900〜1,500</div>
+        </div>
+      </div>
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd?w=500&auto=format&fit=crop&q=80" alt="飲茶" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">ランチ</div>
+          <div class="g-name">飲茶（ヤムチャ）</div>
+          <div class="g-desc">茶を飲みながら点心を楽しむ中国の食文化。週末のランチタイムに多くの店で提供。</div>
+          <div class="g-price">¥1,500〜3,000</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ad-box" style="margin-top:24px;">
+      <span class="ad-label">PR</span>
+      <span class="ad-text">中華街レストランの予約はこちら</span>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1EPP+4HCHPU+AD2+60WN6" target="_blank" class="ad-btn">エアトリで航空券を探す →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== アクセス ===== -->
+<section class="ac-section" id="access">
+  <div class="container">
+    <div class="s-tag">ACCESS</div>
+    <h2 class="s-title">中華街への<em>アクセス</em></h2>
+    <div class="ac-grid">
+      <div class="ac-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.4!2d139.6468!3d35.4432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185d4b6bf98e81%3A0xabcdef!2z5qCq5byP5Lya56S-5Lit5Y2a6KGM!5e0!3m2!1sja!2sjp!4v1680000000000" allowfullscreen="" loading="lazy" title="横浜中華街マップ"></iframe>
+      </div>
+      <div class="ac-cards">
+        <div class="ac-card">
+          <div class="ac-card-title">🚃 電車でのアクセス</div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>みなとみらい線「元町・中華街駅」下車すぐ</span><span class="ac-time">渋谷から約32分 / 横浜駅から約6分 / ¥260</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>JR根岸線「石川町駅」から徒歩約5分</span><span class="ac-time">横浜駅から約3分 / ¥150</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>東京駅から乗り換えなしで行ける場合も</span><span class="ac-time">特急利用で約40分</span></div></div>
+        </div>
+        <div class="ac-card">
+          <div class="ac-card-title">🚌 バス・シーバスでのアクセス</div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>横浜駅から観光循環バス「あかいくつ」で約20分</span><span class="ac-time">1回¥100 / 1日乗車券¥500</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>みなとみらいからシーバス（海上交通）</span><span class="ac-time">約20分 / ¥800</span></div></div>
+        </div>
+        <div class="ac-card">
+          <div class="ac-card-title">🕐 混雑情報・おすすめ時間帯</div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>平日午前（10〜12時）：最も空いており快適</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>週末昼〜夕方：非常に混雑、行列必至</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>春節・食祭期間中：特別混雑（周辺道路も渋滞）</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 観光のコツ ===== -->
+<section class="tips-section" id="tips">
+  <div class="container">
+    <div class="s-tag">TRAVEL TIPS</div>
+    <h2 class="s-title">観光を<em>もっと楽しむ</em>コツ</h2>
+    <div class="tips-grid">
+      <div class="tip">
+        <span class="tip-icon">🕐</span>
+        <div class="tip-title">午前中に行く</div>
+        <div class="tip-desc">週末でも午前10〜11時前は比較的空いている。人気店でも行列なしで食べられることが多い。</div>
+      </div>
+      <div class="tip">
+        <span class="tip-icon">💴</span>
+        <div class="tip-title">現金を多めに</div>
+        <div class="tip-desc">食べ歩き屋台は現金のみが多い。小銭（100円・500円）があると便利。カードは高級レストランのみ対応の場合も。</div>
+      </div>
+      <div class="tip">
+        <span class="tip-icon">👟</span>
+        <div class="tip-title">歩きやすい靴で</div>
+        <div class="tip-desc">石畳の道もある。食べながら長距離歩くのでスニーカーがベスト。ヒールは避けよう。</div>
+      </div>
+      <div class="tip">
+        <span class="tip-icon">📅</span>
+        <div class="tip-title">コース料理は必ず予約</div>
+        <div class="tip-desc">週末の本格レストランは数週間前から満席になることも。電話・オンラインで事前予約を。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 実用情報 ===== -->
+<section class="info-section" id="info">
+  <div class="container">
+    <div class="s-tag">PRACTICAL INFO</div>
+    <h2 class="s-title">知っておきたい<em>実用情報</em></h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-head">🏮 基本情報</div>
+        <div class="info-body">
+          <div class="info-row"><span class="info-key">エリア規模</span><span class="info-val">東西南北 各約500m</span></div>
+          <div class="info-row"><span class="info-key">店舗数</span><span class="info-val">約600店以上</span></div>
+          <div class="info-row"><span class="info-key">営業時間</span><span class="info-val">10:00〜22:00（目安）</span></div>
+          <div class="info-row"><span class="info-key">定休日</span><span class="info-val">店により異なる</span></div>
+          <div class="info-row"><span class="info-key">駐車場</span><span class="info-val">周辺に有料あり</span></div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-head">📍 最寄り駅</div>
+        <div class="info-body">
+          <div class="info-row"><span class="info-key">みなとみらい線</span><span class="info-val">元町・中華街駅</span></div>
+          <div class="info-row"><span class="info-key">JR根岸線</span><span class="info-val">石川町駅（徒歩5分）</span></div>
+          <div class="info-row"><span class="info-key">横浜駅から</span><span class="info-val">電車で約6分</span></div>
+          <div class="info-row"><span class="info-key">渋谷から</span><span class="info-val">直通約32分</span></div>
+          <div class="info-row"><span class="info-key">羽田空港から</span><span class="info-val">約40分</span></div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-head">💡 知っておくと便利</div>
+        <div class="info-body">
+          <div class="info-row"><span class="info-key">混雑が少ない時間</span><span class="info-val">平日午前</span></div>
+          <div class="info-row"><span class="info-key">最もにぎわう時期</span><span class="info-val">春節（1〜2月）</span></div>
+          <div class="info-row"><span class="info-key">Wi-Fi</span><span class="info-val">一部エリアで無料</span></div>
+          <div class="info-row"><span class="info-key">トイレ</span><span class="info-val">公衆トイレ複数あり</span></div>
+          <div class="info-row"><span class="info-key">観光案内所</span><span class="info-val">中華街内に設置</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">YOKOHAMA</div>
+  <a href="index.html" class="footer-back">← 横浜旅行ガイドに戻る</a>
+  <div class="footer-bottom">© 2026 YOKOHAMA GUIDE. All rights reserved. | Photos: <a href="https://unsplash.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Unsplash</a> | 掲載情報は変更になる場合があります。各店舗の公式情報をご確認ください。</div>
+</footer>
+
+<script>
+const sections = document.querySelectorAll('section[id], div[id]');
+const navLinks = document.querySelectorAll('.pn');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+  navLinks.forEach(a => { a.classList.remove('active'); if (a.getAttribute('href') === '#' + cur) a.classList.add('active'); });
+});
+function setLang(l, btn) {
+  document.querySelectorAll('.lb').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const fm = {ja:"'DM Sans','Noto Sans JP',sans-serif",en:"'DM Sans',sans-serif",zh:"'DM Sans','Noto Sans SC',sans-serif",ko:"'DM Sans','Noto Sans KR',sans-serif"};
+  document.body.style.fontFamily = fm[l] || fm.ja;
+}
+</script>
+</body>
+</html>

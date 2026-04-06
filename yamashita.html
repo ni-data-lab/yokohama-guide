@@ -1,1 +1,547 @@
-{"type":"error","error":{"type":"api_error","message":"Internal server error"},"request_id":"req_011CZnjixyjpr1fNMoc8Qtu4"}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>山下公園・元町 完全ガイド — YOKOHAMA GUIDE</title>
+<meta name="description" content="山下公園のバラ園・氷川丸・元町商店街・港の見える丘公園を1ページで完全網羅。アクセス・季節情報も。">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&family=DM+Sans:wght@300;400;500;600&display=swap');
+:root{
+  --sky:#0ea5e9;--sky-light:#e0f2fe;--ocean:#0369a1;
+  --green:#10b981;--green-dark:#065f46;--green-light:#d1fae5;
+  --coral:#f97316;--sand:#fef3c7;
+  --white:#fff;--gray-light:#f1f5f9;--text:#0f172a;--muted:#64748b;
+  --shadow:0 4px 24px rgba(16,185,129,0.1);--shadow-lg:0 12px 48px rgba(16,185,129,0.16);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans','Noto Sans JP',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+img{max-width:100%;height:auto;display:block;}
+
+header{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(16,185,129,0.1);height:58px;display:flex;align-items:center;padding:0 24px;gap:16px;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
+.logo{font-family:'Playfair Display',serif;font-size:18px;font-weight:900;color:var(--ocean);text-decoration:none;}
+.logo em{color:var(--sky);font-style:normal;}
+.header-nav{display:flex;gap:2px;flex:1;justify-content:center;}
+.header-nav a{color:var(--muted);font-size:12px;font-weight:500;padding:5px 10px;border-radius:5px;text-decoration:none;transition:all 0.15s;white-space:nowrap;}
+.header-nav a:hover{background:var(--sky-light);color:var(--ocean);}
+.lang-sw{display:flex;gap:3px;flex-shrink:0;}
+.lb{font-size:10px;font-weight:700;padding:3px 7px;border:1px solid rgba(14,165,233,0.2);border-radius:4px;background:transparent;color:var(--muted);cursor:pointer;transition:all 0.15s;}
+.lb.active{background:var(--sky);color:white;border-color:var(--sky);}
+
+.hero{height:80vh;position:relative;display:flex;align-items:flex-end;overflow:hidden;margin-top:58px;}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(5,60,40,0.88) 0%,rgba(5,60,40,0.3) 55%,transparent 100%);}
+.hero-content{position:relative;z-index:1;padding:48px 48px;max-width:860px;width:100%;}
+.hero-bc{font-size:11px;color:rgba(255,255,255,0.55);margin-bottom:12px;letter-spacing:0.06em;}
+.hero-bc a{color:rgba(255,255,255,0.55);text-decoration:none;}
+.hero-tag{display:inline-block;background:var(--green);color:white;font-size:11px;font-weight:700;letter-spacing:0.1em;padding:4px 14px;border-radius:99px;margin-bottom:14px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,62px);font-weight:900;color:white;line-height:1.0;margin-bottom:14px;text-shadow:0 2px 20px rgba(0,0,0,0.4);}
+.hero h1 em{color:#6ee7b7;font-style:normal;}
+.hero-sub{font-size:15px;color:rgba(255,255,255,0.85);line-height:1.75;margin-bottom:28px;max-width:540px;}
+.hero-stats{display:flex;gap:14px;flex-wrap:wrap;}
+.hs{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);backdrop-filter:blur(8px);border-radius:10px;padding:10px 18px;text-align:center;}
+.hs-val{font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:white;display:block;}
+.hs-label{font-size:10px;color:rgba(255,255,255,0.6);letter-spacing:0.06em;}
+
+.page-nav{background:white;border-bottom:2px solid var(--gray-light);position:sticky;top:58px;z-index:90;overflow-x:auto;}
+.page-nav-inner{max-width:1200px;margin:0 auto;display:flex;}
+.pn{padding:13px 20px;font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap;transition:all 0.15s;display:block;}
+.pn:hover,.pn.active{color:var(--green);border-bottom-color:var(--green);}
+
+section{padding:64px 24px;}
+.container{max-width:1200px;margin:0 auto;}
+.s-tag{font-size:11px;font-weight:700;letter-spacing:0.12em;color:var(--green);text-transform:uppercase;margin-bottom:8px;}
+.s-title{font-family:'Playfair Display',serif;font-size:clamp(24px,4vw,36px);font-weight:900;color:var(--text);line-height:1.2;margin-bottom:12px;}
+.s-title em{color:var(--green);font-style:normal;}
+.s-desc{font-size:14px;color:var(--muted);line-height:1.8;max-width:640px;}
+
+/* 横長セクション */
+.hl-row{padding:52px 0;}
+.hl-row-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;max-width:1200px;margin:0 auto;padding:0 24px;}
+.hl-row-reverse{direction:rtl;}
+.hl-row-reverse>*{direction:ltr;}
+.hl-row-img{border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);}
+.hl-row-img img{width:100%;height:380px;object-fit:cover;transition:transform 0.5s;}
+.hl-row-img:hover img{transform:scale(1.03);}
+.hl-row-num{font-family:'Playfair Display',serif;font-size:56px;font-weight:900;color:var(--green-light);line-height:1;margin-bottom:4px;}
+.hl-row-icon{font-size:32px;margin-bottom:8px;display:block;}
+.hl-row-name{font-family:'Playfair Display',serif;font-size:clamp(20px,2.5vw,26px);font-weight:900;color:var(--text);margin-bottom:14px;line-height:1.2;}
+.hl-row-desc{font-size:14px;color:#334155;line-height:1.85;margin-bottom:20px;}
+.hl-row-meta{display:flex;flex-direction:column;gap:7px;margin-bottom:20px;}
+.hl-meta-item{font-size:12px;color:var(--muted);}
+.hl-row-link{display:inline-flex;align-items:center;gap:6px;color:var(--green);font-size:13px;font-weight:700;padding:9px 18px;border-radius:8px;text-decoration:none;border:2px solid var(--green);transition:all 0.2s;}
+.hl-row-link:hover{background:var(--green);color:white;transform:translateY(-2px);}
+
+/* 季節カレンダー */
+.season-section{background:white;}
+.season-calendar{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px;}
+.sc-card{border-radius:14px;overflow:hidden;box-shadow:var(--shadow);}
+.sc-img{height:160px;overflow:hidden;}
+.sc-img img{width:100%;height:100%;object-fit:cover;}
+.sc-body{padding:16px;}
+.sc-season{font-family:'Playfair Display',serif;font-size:18px;font-weight:900;color:var(--green);margin-bottom:4px;}
+.sc-period{font-size:11px;color:var(--muted);margin-bottom:10px;display:block;}
+.sc-events{display:flex;flex-direction:column;gap:5px;}
+.sc-event{font-size:11px;color:var(--text);display:flex;align-items:flex-start;gap:5px;line-height:1.5;}
+
+/* グルメ */
+.gourmet-section{background:var(--gray-light);}
+.g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;}
+.g-card{background:white;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);transition:all 0.2s;}
+.g-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+.g-img{height:150px;overflow:hidden;}
+.g-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s;}
+.g-card:hover .g-img img{transform:scale(1.06);}
+.g-body{padding:14px;}
+.g-type{font-size:10px;font-weight:700;letter-spacing:0.1em;color:var(--green);text-transform:uppercase;margin-bottom:4px;}
+.g-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.g-area{font-size:11px;color:var(--muted);margin-bottom:4px;}
+.g-desc{font-size:11px;color:var(--muted);line-height:1.7;}
+.g-price{font-size:12px;color:var(--coral);font-weight:700;margin-top:6px;}
+
+/* アクセス */
+.ac-section{background:white;}
+.ac-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;}
+.ac-map iframe{width:100%;height:340px;border:0;display:block;border-radius:14px;box-shadow:var(--shadow-lg);}
+.ac-cards{display:flex;flex-direction:column;gap:14px;}
+.ac-card{background:var(--gray-light);border-radius:12px;padding:18px 20px;}
+.ac-card-title{font-size:14px;font-weight:700;color:var(--ocean);margin-bottom:10px;display:flex;align-items:center;gap:7px;}
+.ac-row{display:flex;gap:8px;padding:7px 0;border-bottom:1px solid rgba(16,185,129,0.1);}
+.ac-row:last-child{border:none;}
+.ac-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:5px;}
+.ac-text{font-size:12px;color:var(--muted);line-height:1.6;}
+.ac-time{font-size:11px;color:var(--green);font-weight:700;display:block;margin-top:2px;}
+
+/* 実用情報 */
+.info-section{background:var(--gray-light);}
+.info-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:28px;}
+.info-card{background:white;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+.info-head{background:var(--green-dark);color:white;padding:14px 18px;font-size:13px;font-weight:700;}
+.info-body{padding:14px 18px;}
+.info-row{display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--gray-light);font-size:12px;gap:8px;}
+.info-row:last-child{border:none;}
+.info-key{color:var(--muted);flex-shrink:0;}
+.info-val{font-weight:600;color:var(--text);text-align:right;}
+.info-val.free{color:var(--green);}
+.info-val.paid{color:var(--coral);}
+
+.ad-box{background:var(--sand);border:1px solid rgba(249,115,22,0.2);border-radius:12px;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;margin:24px 0;flex-wrap:wrap;}
+.ad-label{font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;}
+.ad-text{font-size:14px;font-weight:600;color:var(--text);}
+.ad-btn{background:var(--coral);color:white;font-size:13px;font-weight:700;padding:9px 20px;border-radius:99px;text-decoration:none;transition:all 0.15s;white-space:nowrap;}
+.ad-btn:hover{opacity:0.88;transform:translateY(-1px);}
+
+footer{background:#0f172a;color:rgba(255,255,255,0.6);padding:40px 24px 24px;text-align:center;}
+.footer-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:white;margin-bottom:10px;}
+.footer-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);font-size:13px;font-weight:500;padding:8px 18px;border-radius:99px;text-decoration:none;margin-bottom:20px;transition:all 0.15s;}
+.footer-back:hover{background:rgba(255,255,255,0.15);color:white;}
+.footer-bottom{font-size:11px;color:rgba(255,255,255,0.3);border-top:1px solid rgba(255,255,255,0.08);padding-top:14px;margin-top:16px;}
+
+@media(max-width:900px){
+  .hl-row-inner{grid-template-columns:1fr;gap:24px;}
+  .hl-row-reverse{direction:ltr;}
+  .hl-row-img img{height:240px;}
+  .season-calendar,.g-grid{grid-template-columns:1fr 1fr;}
+  .ac-grid{grid-template-columns:1fr;}
+  .info-grid{grid-template-columns:1fr 1fr;}
+  .header-nav{display:none;}
+  .hero-content{padding:32px 20px;}
+}
+@media(max-width:600px){
+  .g-grid,.info-grid{grid-template-columns:1fr;}
+  .season-calendar{grid-template-columns:1fr 1fr;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">YOKO<em>HAMA</em></a>
+  <nav class="header-nav">
+    <a href="#highlights">見どころ</a>
+    <a href="#season">季節カレンダー</a>
+    <a href="#gourmet">グルメ</a>
+    <a href="#access">アクセス</a>
+    <a href="#info">実用情報</a>
+    <a href="expo.html" style="color:var(--green);font-weight:700;">🌸 花博2027</a>
+  </nav>
+  <div class="lang-sw">
+    <button class="lb active" onclick="setLang('ja',this)">JA</button>
+    <button class="lb" onclick="setLang('en',this)">EN</button>
+    <button class="lb" onclick="setLang('zh',this)">中文</button>
+    <button class="lb" onclick="setLang('ko',this)">한국어</button>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1714963114094-02d723626718?w=1800&auto=format&fit=crop&q=85" alt="山下公園">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-bc"><a href="index.html">YOKOHAMA GUIDE</a> › 山下公園・元町</div>
+    <div class="hero-tag">YAMASHITA PARK · MOTOMACHI</div>
+    <h1>山下公園・<em>元町</em><br>完全ガイド</h1>
+    <p class="hero-sub">バラ園・氷川丸・港の見える丘公園・元町ショッピング街。横浜港を望む緑豊かな公園と歴史あるショッピング街を1ページで完全ガイド。</p>
+    <div class="hero-stats">
+      <div class="hs"><span class="hs-val">無料</span><span class="hs-label">公園入場料</span></div>
+      <div class="hs"><span class="hs-val">5月</span><span class="hs-label">バラの見頃</span></div>
+      <div class="hs"><span class="hs-val">徒歩5分</span><span class="hs-label">元町・中華街駅から</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="page-nav">
+  <div class="page-nav-inner">
+    <a href="#highlights" class="pn active">🌹 見どころ</a>
+    <a href="#season" class="pn">🌸 季節カレンダー</a>
+    <a href="#gourmet" class="pn">🍽️ グルメ</a>
+    <a href="#access" class="pn">🚃 アクセス</a>
+    <a href="#info" class="pn">ℹ️ 実用情報</a>
+  </div>
+</div>
+
+<!-- ===== 見どころ ===== -->
+<section style="background:white;padding:56px 24px 0;" id="highlights">
+  <div class="container">
+    <div class="s-tag">HIGHLIGHTS</div>
+    <h2 class="s-title">山下公園・元町の<em>見どころ</em></h2>
+    <p class="s-desc">港の絶景と歴史ある街並みが融合するエリア。バラ園・氷川丸・港の見える丘公園・元町商店街と、徒歩で回れる範囲に見どころが集中しています。</p>
+  </div>
+</section>
+
+<div class="hl-row" style="background:white;">
+  <div class="hl-row-inner">
+    <div class="hl-row-img">
+      <img src="https://images.unsplash.com/photo-1702592651258-9cf6a5b908fa?w=800&auto=format&fit=crop&q=80" alt="バラ園" loading="lazy">
+    </div>
+    <div class="hl-row-body">
+      <div class="hl-row-num">01</div>
+      <span class="hl-row-icon">🌹</span>
+      <h3 class="hl-row-name">山下公園 バラ園</h3>
+      <p class="hl-row-desc">横浜港を背景に、約100種・1,700本以上のバラが咲き誇る山下公園のバラ園。春（5月）と秋（10〜11月）の年2回見頃を迎えます。横浜港の青い海と色とりどりのバラのコントラストは絶景で、多くのカメラマンも訪れます。バラ以外にも季節ごとの花が楽しめる横浜市民の憩いの場。入場は無料。</p>
+      <div class="hl-row-meta">
+        <span class="hl-meta-item">💰 入場無料</span>
+        <span class="hl-meta-item">🌹 春の見頃：5月上旬〜中旬 / 秋の見頃：10〜11月</span>
+        <span class="hl-meta-item">🕐 24時間開放（夜間照明あり）</span>
+        <span class="hl-meta-item">📍 元町・中華街駅から徒歩5分</span>
+      </div>
+      <a href="https://www.city.yokohama.lg.jp/kurashi/machizukuri-kankyo/midori-koen/park/yamashita.html" target="_blank" rel="noopener" class="hl-row-link">山下公園 公式情報 →</a>
+    </div>
+  </div>
+</div>
+
+<div class="hl-row" style="background:var(--gray-light);">
+  <div class="hl-row-inner hl-row-reverse">
+    <div class="hl-row-img">
+      <img src="https://images.unsplash.com/photo-1597472620133-3e310eb1a881?w=800&auto=format&fit=crop&q=80" alt="氷川丸" loading="lazy">
+    </div>
+    <div class="hl-row-body">
+      <div class="hl-row-num">02</div>
+      <span class="hl-row-icon">🚢</span>
+      <h3 class="hl-row-name">氷川丸</h3>
+      <p class="hl-row-desc">1930年に建造された元・太平洋航路の貨客船で、国の重要文化財に指定。山下公園に永久停泊しており、船内を見学できます。アールデコ調の豪華なインテリアが当時の航海の優雅さを伝えてくれます。昭和天皇・皇后両陛下も乗船された歴史ある船で、横浜港のシンボル的存在です。</p>
+      <div class="hl-row-meta">
+        <span class="hl-meta-item">💰 大人¥300 / 小中学生¥100</span>
+        <span class="hl-meta-item">🕐 10:00〜17:00（最終入館16:30）/ 月曜休館</span>
+        <span class="hl-meta-item">📍 山下公園内（大桟橋寄り）</span>
+      </div>
+      <a href="https://www.nyk.com/rekishi/museum/hikawamaru/" target="_blank" rel="noopener" class="hl-row-link">氷川丸 公式サイト →</a>
+    </div>
+  </div>
+</div>
+
+<div class="hl-row" style="background:white;">
+  <div class="hl-row-inner">
+    <div class="hl-row-img">
+      <img src="https://images.pexels.com/photos/34404884/pexels-photo-34404884.jpeg?w=800&auto=format&fit=crop&q=80" alt="港の見える丘公園" loading="lazy">
+    </div>
+    <div class="hl-row-body">
+      <div class="hl-row-num">03</div>
+      <span class="hl-row-icon">🌉</span>
+      <h3 class="hl-row-name">港の見える丘公園</h3>
+      <p class="hl-row-desc">横浜港とベイブリッジを一望できる山手の高台にある公園。フランス軍が駐留した「フランス山地区」には風車とフランス領事館跡が残り、異国情緒あふれる景観が楽しめます。バラ園もあり、四季を通じて美しい花が咲きます。夕暮れ時の眺めは特に絶景で、カップルに人気のスポットです。</p>
+      <div class="hl-row-meta">
+        <span class="hl-meta-item">💰 入場無料</span>
+        <span class="hl-meta-item">🕐 24時間開放</span>
+        <span class="hl-meta-item">📍 元町・中華街駅から徒歩10分（急坂あり）</span>
+        <span class="hl-meta-item">💡 夕暮れ〜夜景がおすすめ。周辺に西洋館も多数</span>
+      </div>
+      <a href="https://www.city.yokohama.lg.jp/kurashi/machizukuri-kankyo/midori-koen/park/minatomieru.html" target="_blank" rel="noopener" class="hl-row-link">港の見える丘公園 情報 →</a>
+    </div>
+  </div>
+</div>
+
+<div class="hl-row" style="background:var(--gray-light);">
+  <div class="hl-row-inner hl-row-reverse">
+    <div class="hl-row-img">
+      <img src="https://images.unsplash.com/photo-1772443870773-02d15fd3628c?w=800&auto=format&fit=crop&q=80" alt="元町商店街" loading="lazy">
+    </div>
+    <div class="hl-row-body">
+      <div class="hl-row-num">04</div>
+      <span class="hl-row-icon">🛍️</span>
+      <h3 class="hl-row-name">元町ショッピングストリート</h3>
+      <p class="hl-row-desc">横浜開港とともに発展した約600mのショッピングストリート。石畳の道にキタムラ・ミルク・スイニー（馬車道）など横浜発祥の老舗ブランドが並びます。欧風の建物とおしゃれなカフェ・ベーカリーが点在する、横浜らしいエレガントな雰囲気が魅力。山手西洋館や外国人墓地も徒歩圏内です。</p>
+      <div class="hl-row-meta">
+        <span class="hl-meta-item">🛍️ 営業時間：10:00〜20:00（店舗により異なる）</span>
+        <span class="hl-meta-item">📍 元町・中華街駅 改札直結</span>
+        <span class="hl-meta-item">💡 毎週金曜夜は「エレガントナイト」として夜遅まで営業する店も</span>
+      </div>
+      <a href="https://www.motomachi.or.jp/" target="_blank" rel="noopener" class="hl-row-link">元町ショッピングストリート 公式 →</a>
+    </div>
+  </div>
+</div>
+
+<div class="hl-row" style="background:white;">
+  <div class="hl-row-inner">
+    <div class="hl-row-img">
+      <img src="https://images.pexels.com/photos/21706325/pexels-photo-21706325.jpeg?w=800&auto=format&fit=crop&q=80" alt="横浜港クルーズ発着場" loading="lazy">
+    </div>
+    <div class="hl-row-body">
+      <div class="hl-row-num">05</div>
+      <span class="hl-row-icon">⛵</span>
+      <h3 class="hl-row-name">横浜港クルーズ発着場</h3>
+      <p class="hl-row-desc">山下公園の大桟橋は横浜港観光クルーズの主要発着場。ロイヤルウイング（船上レストラン）やマリンルージュ、水上バス「シーバス」など複数のクルーズが発着します。海上からみなとみらいやベイブリッジを眺める体験は格別で、サンセットクルーズや夜景クルーズは特に人気が高いです。</p>
+      <div class="hl-row-meta">
+        <span class="hl-meta-item">💰 水上バス¥800〜 / クルーズ船¥1,500〜</span>
+        <span class="hl-meta-item">⛵ ロイヤルウイング（船上レストラン）：¥4,500〜 要予約</span>
+        <span class="hl-meta-item">📍 山下公園 大桟橋・山下公園桟橋</span>
+      </div>
+      <a href="https://www.royalwing.co.jp/" target="_blank" rel="noopener" class="hl-row-link">ロイヤルウイング 公式 →</a>
+    </div>
+  </div>
+</div>
+
+<div style="padding:0 24px;max-width:1200px;margin:0 auto;">
+  <div class="ad-box">
+    <span class="ad-label">PR</span>
+    <span class="ad-text">山下公園・元町周辺のホテルをお得に予約</span>
+    <a href="https://hb.afl.rakuten.co.jp/hgc/529afa60.a8148527.529afa61.54d7ba9c/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" class="ad-btn">楽天トラベルで探す →</a>
+  </div>
+</div>
+
+<!-- ===== 季節カレンダー ===== -->
+<section class="season-section" id="season">
+  <div class="container">
+    <div class="s-tag">SEASONAL CALENDAR</div>
+    <h2 class="s-title">山下公園・元町<em>季節カレンダー</em></h2>
+    <p class="s-desc">1年を通じて楽しめますが、花の見頃や季節イベントに合わせて訪れるとより楽しい。</p>
+    <div class="season-calendar">
+      <div class="sc-card">
+        <div class="sc-img"><img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?w=400&auto=format&fit=crop&q=80" alt="春" loading="lazy"></div>
+        <div class="sc-body">
+          <div class="sc-season">春</div>
+          <span class="sc-period">3月〜5月</span>
+          <div class="sc-events">
+            <div class="sc-event">🌸 大岡川桜並木（3〜4月）</div>
+            <div class="sc-event">🌹 バラ園の見頃（5月上〜中旬）</div>
+            <div class="sc-event">🎉 横浜フラワーフェスティバル（5月）</div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-card">
+        <div class="sc-img"><img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=400&auto=format&fit=crop&q=80" alt="夏" loading="lazy"></div>
+        <div class="sc-body">
+          <div class="sc-season">夏</div>
+          <span class="sc-period">6月〜8月</span>
+          <div class="sc-events">
+            <div class="sc-event">⛵ 港クルーズ（夕涼みに最適）</div>
+            <div class="sc-event">🌊 横浜開港祭（6月）</div>
+            <div class="sc-event">🎆 花火大会（7〜8月）</div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-card">
+        <div class="sc-img"><img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400&auto=format&fit=crop&q=80" alt="秋" loading="lazy"></div>
+        <div class="sc-body">
+          <div class="sc-season">秋</div>
+          <span class="sc-period">9月〜11月</span>
+          <div class="sc-events">
+            <div class="sc-event">🌹 秋バラの見頃（10〜11月）</div>
+            <div class="sc-event">🌼 コスモス（10月）</div>
+            <div class="sc-event">🍂 港の見える丘公園の紅葉</div>
+          </div>
+        </div>
+      </div>
+      <div class="sc-card">
+        <div class="sc-img"><img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400&auto=format&fit=crop&q=80" alt="冬" loading="lazy"></div>
+        <div class="sc-body">
+          <div class="sc-season">冬</div>
+          <span class="sc-period">12月〜2月</span>
+          <div class="sc-events">
+            <div class="sc-event">✨ 山下公園イルミネーション</div>
+            <div class="sc-event">🎄 元町クリスマス装飾</div>
+            <div class="sc-event">🌙 冬の夜景が特に美しい</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== グルメ ===== -->
+<section class="gourmet-section" id="gourmet">
+  <div class="container">
+    <div class="s-tag">GOURMET</div>
+    <h2 class="s-title">周辺<em>グルメガイド</em></h2>
+    <p class="s-desc">港を眺めながらの食事、元町の老舗カフェ、船上レストランまで。シーン別にご紹介。</p>
+    <div class="g-grid">
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&auto=format&fit=crop&q=80" alt="元町カフェ" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">カフェ</div>
+          <div class="g-name">元町 老舗カフェ</div>
+          <div class="g-area">📍 元町商店街</div>
+          <div class="g-desc">石畳の街並みに溶け込む個性的なカフェが点在。テラス席でゆっくりコーヒーを楽しめる。</div>
+          <div class="g-price">¥700〜1,200</div>
+        </div>
+      </div>
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?w=500" alt="海景レストラン" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">レストラン</div>
+          <div class="g-name">山下公園 海辺レストラン</div>
+          <div class="g-area">📍 山下公園周辺</div>
+          <div class="g-desc">横浜港を眺めながら食事できるレストランやカフェが立地。ランチもディナーも港景色付き。</div>
+          <div class="g-price">¥1,500〜4,000</div>
+        </div>
+      </div>
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&auto=format&fit=crop&q=80" alt="船上レストラン" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">特別体験</div>
+          <div class="g-name">ロイヤルウイング（船上レストラン）</div>
+          <div class="g-area">📍 山下公園 大桟橋</div>
+          <div class="g-desc">横浜港をクルーズしながら本格中華料理。ランチ・ディナークルーズとも人気。要予約。</div>
+          <div class="g-price">¥4,500〜8,000</div>
+        </div>
+      </div>
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=500&auto=format&fit=crop&q=80" alt="老舗洋食" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">ランチ</div>
+          <div class="g-name">山手 老舗洋食</div>
+          <div class="g-area">📍 山手・元町周辺</div>
+          <div class="g-desc">横浜洋食文化を担ってきた老舗。ハンバーグ・オムライス・ビーフシチューが名物。</div>
+          <div class="g-price">¥1,200〜2,500</div>
+        </div>
+      </div>
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?w=500&auto=format&fit=crop&q=80" alt="スイーツ" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">スイーツ</div>
+          <div class="g-name">元町スイーツ</div>
+          <div class="g-area">📍 元町商店街</div>
+          <div class="g-desc">横浜発祥の洋菓子店や老舗パティスリーが揃う。元町ケーキはお土産にも人気。</div>
+          <div class="g-price">¥400〜1,000</div>
+        </div>
+      </div>
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=500&auto=format&fit=crop&q=80" alt="ベーカリー" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">ベーカリー</div>
+          <div class="g-name">元町ベーカリー</div>
+          <div class="g-area">📍 元町商店街</div>
+          <div class="g-desc">横浜洋食文化を支えてきた老舗ベーカリー。散策のお供に焼きたてパンをどうぞ。</div>
+          <div class="g-price">¥200〜500</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== アクセス ===== -->
+<section class="ac-section" id="access">
+  <div class="container">
+    <div class="s-tag">ACCESS</div>
+    <h2 class="s-title">山下公園・元町への<em>アクセス</em></h2>
+    <div class="ac-grid">
+      <div class="ac-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3247.5!2d139.6480!3d35.4387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185d4b!2z5bGx5LiL5YWs5ZyS!5e0!3m2!1sja!2sjp!4v1680000000000" allowfullscreen="" loading="lazy" title="山下公園マップ"></iframe>
+      </div>
+      <div class="ac-cards">
+        <div class="ac-card">
+          <div class="ac-card-title">🚃 電車でのアクセス</div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>みなとみらい線「元町・中華街駅」から徒歩5分</span><span class="ac-time">横浜駅から約6分 / 渋谷から約32分</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>JR根岸線「石川町駅」から徒歩約10分</span><span class="ac-time">横浜駅から約3分</span></div></div>
+        </div>
+        <div class="ac-card">
+          <div class="ac-card-title">🚌 バス・シーバス</div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>横浜駅から「あかいくつ」バスで約25分</span><span class="ac-time">1回¥100 / 1日乗車券¥500</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>シーバス（みなとみらい→山下公園）</span><span class="ac-time">約20分 / ¥800 ／ 景色を楽しみながら移動</span></div></div>
+        </div>
+        <div class="ac-card">
+          <div class="ac-card-title">🕐 開放時間・入場料</div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>山下公園：24時間開放 / 入場無料</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>氷川丸：10:00〜17:00（月曜休）/ 大人¥300</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>港の見える丘公園：24時間開放 / 無料</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 実用情報 ===== -->
+<section class="info-section" id="info">
+  <div class="container">
+    <div class="s-tag">PRACTICAL INFO</div>
+    <h2 class="s-title">知っておくと便利な<em>実用情報</em></h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-head">🌹 山下公園</div>
+        <div class="info-body">
+          <div class="info-row"><span class="info-key">入場料</span><span class="info-val free">無料</span></div>
+          <div class="info-row"><span class="info-key">開放時間</span><span class="info-val">24時間</span></div>
+          <div class="info-row"><span class="info-key">バラの見頃</span><span class="info-val">5月・10〜11月</span></div>
+          <div class="info-row"><span class="info-key">氷川丸入場料</span><span class="info-val paid">大人¥300</span></div>
+          <div class="info-row"><span class="info-key">最寄り駅</span><span class="info-val">元町・中華街駅</span></div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-head">🛍️ 元町商店街</div>
+        <div class="info-body">
+          <div class="info-row"><span class="info-key">営業時間</span><span class="info-val">10:00〜20:00</span></div>
+          <div class="info-row"><span class="info-key">定休日</span><span class="info-val">店舗により異なる</span></div>
+          <div class="info-row"><span class="info-key">ストリート長</span><span class="info-val">約600m</span></div>
+          <div class="info-row"><span class="info-key">最寄り駅</span><span class="info-val">元町・中華街駅直結</span></div>
+          <div class="info-row"><span class="info-key">駐車場</span><span class="info-val">周辺に有料あり</span></div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-head">💡 観光のポイント</div>
+        <div class="info-body">
+          <div class="info-row"><span class="info-key">所要時間</span><span class="info-val">2〜4時間</span></div>
+          <div class="info-row"><span class="info-key">中華街と組み合わせ</span><span class="info-val">徒歩5分</span></div>
+          <div class="info-row"><span class="info-key">みなとみらいへ</span><span class="info-val">シーバスで20分</span></div>
+          <div class="info-row"><span class="info-key">急坂に注意</span><span class="info-val">港の見える丘公園</span></div>
+          <div class="info-row"><span class="info-key">おすすめ季節</span><span class="info-val">5月・10〜11月</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">YOKOHAMA</div>
+  <a href="index.html" class="footer-back">← 横浜旅行ガイドに戻る</a>
+  <div class="footer-bottom">© 2026 YOKOHAMA GUIDE. All rights reserved. | Photos: <a href="https://unsplash.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Unsplash</a> / <a href="https://www.pexels.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Pexels</a> | 掲載情報は変更になる場合があります。</div>
+</footer>
+
+<script>
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.pn');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+  navLinks.forEach(a => { a.classList.remove('active'); if (a.getAttribute('href') === '#' + cur) a.classList.add('active'); });
+});
+function setLang(l, btn) {
+  document.querySelectorAll('.lb').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const fm = {ja:"'DM Sans','Noto Sans JP',sans-serif",en:"'DM Sans',sans-serif",zh:"'DM Sans','Noto Sans SC',sans-serif",ko:"'DM Sans','Noto Sans KR',sans-serif"};
+  document.body.style.fontFamily = fm[l] || fm.ja;
+}
+</script>
+</body>
+</html>
