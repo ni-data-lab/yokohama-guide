@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>横浜駅周辺 完全ガイド — YOKOHAMA GUIDE</title>
+<meta name="description" content="横浜駅周辺のショッピング・グルメ・アクセス完全ガイド。そごう・高島屋・ルミネ・ジョイナスなど主要施設を網羅。">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&family=DM+Sans:wght@300;400;500;600&display=swap');
+:root{
+  --sky:#0ea5e9;--sky-light:#e0f2fe;--ocean:#0369a1;
+  --purple:#7c3aed;--purple-light:#ede9fe;--purple-dark:#4c1d95;
+  --coral:#f97316;--sand:#fef3c7;
+  --white:#fff;--gray-light:#f1f5f9;--text:#0f172a;--muted:#64748b;
+  --shadow:0 4px 24px rgba(124,58,237,0.08);--shadow-lg:0 12px 48px rgba(124,58,237,0.14);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans','Noto Sans JP',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+img{max-width:100%;height:auto;display:block;}
+
+header{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(124,58,237,0.1);height:58px;display:flex;align-items:center;padding:0 24px;gap:16px;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
+.logo{font-family:'Playfair Display',serif;font-size:18px;font-weight:900;color:var(--ocean);text-decoration:none;}
+.logo em{color:var(--sky);font-style:normal;}
+.header-nav{display:flex;gap:2px;flex:1;justify-content:center;}
+.header-nav a{color:var(--muted);font-size:12px;font-weight:500;padding:5px 10px;border-radius:5px;text-decoration:none;transition:all 0.15s;white-space:nowrap;}
+.header-nav a:hover{background:var(--sky-light);color:var(--ocean);}
+.lang-sw{display:flex;gap:3px;flex-shrink:0;}
+.lb{font-size:10px;font-weight:700;padding:3px 7px;border:1px solid rgba(14,165,233,0.2);border-radius:4px;background:transparent;color:var(--muted);cursor:pointer;transition:all 0.15s;}
+.lb.active{background:var(--sky);color:white;border-color:var(--sky);}
+
+.hero{height:72vh;position:relative;display:flex;align-items:flex-end;overflow:hidden;margin-top:58px;}
+.hero-bg img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(30,0,60,0.88) 0%,rgba(30,0,60,0.3) 55%,transparent 100%);}
+.hero-content{position:relative;z-index:1;padding:48px 48px;max-width:860px;width:100%;}
+.hero-bc{font-size:11px;color:rgba(255,255,255,0.55);margin-bottom:12px;letter-spacing:0.06em;}
+.hero-bc a{color:rgba(255,255,255,0.55);text-decoration:none;}
+.hero-tag{display:inline-block;background:var(--purple);color:white;font-size:11px;font-weight:700;letter-spacing:0.1em;padding:4px 14px;border-radius:99px;margin-bottom:14px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,62px);font-weight:900;color:white;line-height:1.0;margin-bottom:14px;text-shadow:0 2px 20px rgba(0,0,0,0.4);}
+.hero h1 em{color:#c4b5fd;font-style:normal;}
+.hero-sub{font-size:15px;color:rgba(255,255,255,0.85);line-height:1.75;margin-bottom:28px;max-width:540px;}
+.hero-stats{display:flex;gap:14px;flex-wrap:wrap;}
+.hs{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);backdrop-filter:blur(8px);border-radius:10px;padding:10px 18px;text-align:center;}
+.hs-val{font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:white;display:block;}
+.hs-label{font-size:10px;color:rgba(255,255,255,0.6);letter-spacing:0.06em;}
+
+.page-nav{background:white;border-bottom:2px solid var(--gray-light);position:sticky;top:58px;z-index:90;overflow-x:auto;}
+.page-nav-inner{max-width:1200px;margin:0 auto;display:flex;}
+.pn{padding:13px 20px;font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap;transition:all 0.15s;display:block;}
+.pn:hover,.pn.active{color:var(--purple);border-bottom-color:var(--purple);}
+
+section{padding:64px 24px;}
+.container{max-width:1200px;margin:0 auto;}
+.s-tag{font-size:11px;font-weight:700;letter-spacing:0.12em;color:var(--purple);text-transform:uppercase;margin-bottom:8px;}
+.s-title{font-family:'Playfair Display',serif;font-size:clamp(24px,4vw,36px);font-weight:900;color:var(--text);line-height:1.2;margin-bottom:12px;}
+.s-title em{color:var(--purple);font-style:normal;}
+.s-desc{font-size:14px;color:var(--muted);line-height:1.8;max-width:640px;}
+
+/* 横長セクション */
+.hl-row{padding:52px 0;}
+.hl-row-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;max-width:1200px;margin:0 auto;padding:0 24px;}
+.hl-row-reverse{direction:rtl;}
+.hl-row-reverse>*{direction:ltr;}
+.hl-row-img{border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);}
+.hl-row-img img{width:100%;height:360px;object-fit:cover;transition:transform 0.5s;}
+.hl-row-img:hover img{transform:scale(1.03);}
+.hl-row-num{font-family:'Playfair Display',serif;font-size:56px;font-weight:900;color:var(--purple-light);line-height:1;margin-bottom:4px;}
+.hl-row-icon{font-size:32px;margin-bottom:8px;display:block;}
+.hl-row-name{font-family:'Playfair Display',serif;font-size:clamp(20px,2.5vw,26px);font-weight:900;color:var(--text);margin-bottom:14px;line-height:1.2;}
+.hl-row-desc{font-size:14px;color:#334155;line-height:1.85;margin-bottom:20px;}
+.hl-row-meta{display:flex;flex-direction:column;gap:7px;margin-bottom:20px;}
+.hl-meta-item{font-size:12px;color:var(--muted);}
+.hl-row-link{display:inline-flex;align-items:center;gap:6px;color:var(--purple);font-size:13px;font-weight:700;padding:9px 18px;border-radius:8px;text-decoration:none;border:2px solid var(--purple);transition:all 0.2s;}
+.hl-row-link:hover{background:var(--purple);color:white;transform:translateY(-2px);}
+
+/* 施設比較 */
+.compare-section{background:var(--gray-light);}
+.compare-table{width:100%;border-collapse:collapse;margin-top:28px;background:white;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);}
+.compare-table th{background:var(--purple-dark);color:white;padding:14px 16px;font-size:12px;font-weight:700;text-align:left;}
+.compare-table td{padding:12px 16px;font-size:12px;color:var(--text);border-bottom:1px solid var(--gray-light);}
+.compare-table tr:last-child td{border-bottom:none;}
+.compare-table tr:hover td{background:var(--purple-light);}
+.tag-dept{background:#fde68a;color:#92400e;font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;}
+.tag-sc{background:#bbf7d0;color:#14532d;font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;}
+.tag-outlet{background:#fecaca;color:#7f1d1d;font-size:10px;font-weight:700;padding:2px 8px;border-radius:99px;}
+
+/* グルメ */
+.gourmet-section{background:white;}
+.g-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;}
+.g-card{border-radius:12px;overflow:hidden;box-shadow:var(--shadow);background:white;transition:all 0.2s;}
+.g-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-lg);}
+.g-img{height:140px;overflow:hidden;}
+.g-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s;}
+.g-card:hover .g-img img{transform:scale(1.06);}
+.g-body{padding:14px;}
+.g-type{font-size:10px;font-weight:700;letter-spacing:0.1em;color:var(--purple);text-transform:uppercase;margin-bottom:4px;}
+.g-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.g-area{font-size:11px;color:var(--muted);margin-bottom:4px;}
+.g-desc{font-size:11px;color:var(--muted);line-height:1.7;}
+.g-price{font-size:12px;color:var(--coral);font-weight:700;margin-top:6px;}
+
+/* アクセスハブ */
+.hub-section{background:var(--purple-dark);padding:64px 24px;}
+.hub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px;}
+.hub-card{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:14px;padding:22px;transition:all 0.2s;}
+.hub-card:hover{background:rgba(255,255,255,0.12);}
+.hub-icon{font-size:32px;margin-bottom:10px;display:block;}
+.hub-dest{font-size:15px;font-weight:700;color:white;margin-bottom:6px;}
+.hub-routes{display:flex;flex-direction:column;gap:5px;}
+.hub-route{font-size:11px;color:rgba(255,255,255,0.7);display:flex;justify-content:space-between;align-items:center;}
+.hub-time{color:#c4b5fd;font-weight:700;font-size:11px;}
+
+/* アクセス */
+.ac-section{background:white;}
+.ac-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;}
+.ac-map iframe{width:100%;height:340px;border:0;display:block;border-radius:14px;box-shadow:var(--shadow-lg);}
+.ac-cards{display:flex;flex-direction:column;gap:14px;}
+.ac-card{background:var(--gray-light);border-radius:12px;padding:18px 20px;}
+.ac-card-title{font-size:14px;font-weight:700;color:var(--ocean);margin-bottom:10px;display:flex;align-items:center;gap:7px;}
+.ac-row{display:flex;gap:8px;padding:7px 0;border-bottom:1px solid rgba(124,58,237,0.1);}
+.ac-row:last-child{border:none;}
+.ac-dot{width:7px;height:7px;border-radius:50%;background:var(--purple);flex-shrink:0;margin-top:5px;}
+.ac-text{font-size:12px;color:var(--muted);line-height:1.6;}
+.ac-time{font-size:11px;color:var(--purple);font-weight:700;display:block;margin-top:2px;}
+
+.ad-box{background:var(--sand);border:1px solid rgba(249,115,22,0.2);border-radius:12px;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;margin:24px 0;flex-wrap:wrap;}
+.ad-label{font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;}
+.ad-text{font-size:14px;font-weight:600;color:var(--text);}
+.ad-btn{background:var(--coral);color:white;font-size:13px;font-weight:700;padding:9px 20px;border-radius:99px;text-decoration:none;transition:all 0.15s;white-space:nowrap;}
+.ad-btn:hover{opacity:0.88;transform:translateY(-1px);}
+
+footer{background:#0f172a;color:rgba(255,255,255,0.6);padding:40px 24px 24px;text-align:center;}
+.footer-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:white;margin-bottom:10px;}
+.footer-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);font-size:13px;font-weight:500;padding:8px 18px;border-radius:99px;text-decoration:none;margin-bottom:20px;transition:all 0.15s;}
+.footer-back:hover{background:rgba(255,255,255,0.15);color:white;}
+.footer-bottom{font-size:11px;color:rgba(255,255,255,0.3);border-top:1px solid rgba(255,255,255,0.08);padding-top:14px;margin-top:16px;}
+
+@media(max-width:900px){
+  .hl-row-inner{grid-template-columns:1fr;gap:24px;}
+  .hl-row-reverse{direction:ltr;}
+  .hl-row-img img{height:240px;}
+  .g-grid,.hub-grid{grid-template-columns:1fr 1fr;}
+  .ac-grid{grid-template-columns:1fr;}
+  .header-nav{display:none;}
+  .hero-content{padding:32px 20px;}
+  .compare-table{font-size:11px;}
+}
+@media(max-width:600px){
+  .g-grid{grid-template-columns:1fr;}
+  .hub-grid{grid-template-columns:1fr;}
+}
+
+/* ===== アフィリエイトバナー ===== */
+.aff-banner{background:linear-gradient(135deg,#fff8f0,#fff3e8);border:2px solid #f97316;border-radius:14px;padding:20px 24px;margin:32px 0;}
+.aff-banner-flight{background:linear-gradient(135deg,#f0f7ff,#e8f2ff);border-color:#0ea5e9;}
+.aff-banner-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.aff-banner-left{display:flex;align-items:center;gap:12px;}
+.aff-pr{font-size:10px;font-weight:700;letter-spacing:0.1em;color:#fff;background:#f97316;padding:2px 7px;border-radius:4px;flex-shrink:0;}
+.aff-banner-flight .aff-pr{background:#0ea5e9;}
+.aff-icon{font-size:32px;flex-shrink:0;}
+.aff-title{font-size:15px;font-weight:700;color:#0f172a;margin-bottom:3px;}
+.aff-sub{font-size:12px;color:#64748b;}
+.aff-btns{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0;}
+.aff-btn{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;padding:11px 20px;border-radius:99px;text-decoration:none;transition:all 0.2s;white-space:nowrap;}
+.aff-btn:hover{transform:translateY(-2px);opacity:0.92;}
+.aff-btn-logo{font-size:11px;font-weight:900;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+.aff-btn-rakuten{background:#bf0000;color:#fff;}
+.aff-btn-rakuten .aff-btn-logo{background:#fff;color:#bf0000;}
+.aff-btn-jalan{background:#f97316;color:#fff;}
+.aff-btn-jalan .aff-btn-logo{background:#fff;color:#f97316;}
+.aff-btn-airtrip{background:#0ea5e9;color:#fff;}
+@media(max-width:700px){
+  .aff-banner-inner{flex-direction:column;align-items:flex-start;}
+  .aff-btns{width:100%;}
+  .aff-btn{flex:1;justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">YOKO<em>HAMA</em></a>
+  <nav class="header-nav">
+    <a href="#highlights">ショッピング</a>
+    <a href="#compare">施設比較</a>
+    <a href="#gourmet">グルメ</a>
+    <a href="#hub">各地へのアクセス</a>
+    <a href="#access">横浜駅アクセス</a>
+    <a href="expo.html" style="color:#10b981;font-weight:700;">🌸 花博2027</a>
+  </nav>
+  <div class="lang-sw">
+    <button class="lb active" onclick="setLang('ja',this)">JA</button>
+    <button class="lb" onclick="setLang('en',this)">EN</button>
+    <button class="lb" onclick="setLang('zh',this)">中文</button>
+    <button class="lb" onclick="setLang('ko',this)">한국어</button>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1543932950-76d6b4a4d557?w=1800&amp;auto=format&amp;fit=crop&amp;q=85" alt="横浜駅周辺">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-bc"><a href="index.html">YOKOHAMA GUIDE</a> › 横浜駅周辺</div>
+    <div class="hero-tag">YOKOHAMA STATION AREA</div>
+    <h1>横浜駅周辺<br><em>完全ガイド</em></h1>
+    <p class="hero-sub">そごう・高島屋・ルミネ・ジョイナスが集結する横浜最大のショッピングエリア。各観光地へのアクセスハブとしても横浜旅行の起点に最適。</p>
+    <div class="hero-stats">
+      <div class="hs"><span class="hs-val">4大</span><span class="hs-label">百貨店・SC</span></div>
+      <div class="hs"><span class="hs-val">6路線</span><span class="hs-label">利用可能</span></div>
+      <div class="hs"><span class="hs-val">東京から</span><span class="hs-label">約28分</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="page-nav">
+  <div class="page-nav-inner">
+    <a href="#highlights" class="pn active">🛍️ ショッピング</a>
+    <a href="#compare" class="pn">📊 施設比較</a>
+    <a href="#gourmet" class="pn">🍽️ グルメ</a>
+    <a href="#hub" class="pn">🗺️ 各地へのアクセス</a>
+    <a href="#access" class="pn">🚃 横浜駅へのアクセス</a>
+  </div>
+</div>
+
+<!-- ===== ショッピング ===== -->
+<section style="background:white;padding:56px 24px 0;" id="highlights">
+  <div class="container">
+    <div class="s-tag">SHOPPING</div>
+    <h2 class="s-title">横浜駅周辺の<em>ショッピング</em></h2>
+    <p class="s-desc">横浜駅を中心に百貨店・ショッピングセンターが集結。雨の日でも地下街でつながっており、一日中快適にショッピングが楽しめます。</p>
+  </div>
+</section>
+
+<div class="hl-row" style="background:white;">
+  <div class="hl-row-inner">
+    <div class="hl-row-img">
+      <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="そごう横浜店 百貨店" loading="lazy">
+    </div>
+    <div class="hl-row-body">
+      <div class="hl-row-num">01</div>
+      <span class="hl-row-icon">🏬</span>
+      <h3 class="hl-row-name">そごう横浜店</h3>
+      <p class="hl-row-desc">横浜駅東口直結の大型百貨店。地下1階〜10階まで幅広いブランド・ファッション・グルメが揃います。食品フロアの充実度は横浜随一で、全国の名産品や横浜名物も豊富。最上階のレストランフロアからは港の景色も楽しめます。お土産の購入にも便利な横浜ショッピングの定番スポット。</p>
+      <div class="hl-row-meta">
+        <span class="hl-meta-item">🕐 10:00〜20:00（レストランは〜22:00）</span>
+        <span class="hl-meta-item">📍 横浜駅東口 直結</span>
+        <span class="hl-meta-item">💡 地下食品フロアで横浜土産をまとめて購入できる</span>
+      </div>
+      <a href="https://www.sogo-seibu.jp/yokohama/" target="_blank" rel="noopener" class="hl-row-link">そごう横浜店 公式サイト →</a>
+    </div>
+  </div>
+</div>
+
+<div class="hl-row" style="background:var(--gray-light);">
+  <div class="hl-row-inner hl-row-reverse">
+    <div class="hl-row-img">
+      <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="高島屋横浜店 ファッション" loading="lazy">
+    </div>
+    <div class="hl-row-body">
+      <div class="hl-row-num">02</div>
+      <span class="hl-row-icon">🎁</span>
+      <h3 class="hl-row-name">横浜高島屋・タカシマヤ スクエア</h3>
+      <p class="hl-row-desc">横浜駅西口に位置する老舗百貨店。上質なブランドと横浜らしいセレクトショップが揃います。隣接するタカシマヤ スクエアとあわせてショッピング・グルメが充実。横浜を代表するプレミアムショッピングエリアです。お中元・お歳暮など贈り物の購入にも定評があります。</p>
+      <div class="hl-row-meta">
+        <span class="hl-meta-item">🕐 10:30〜20:00（レストランは〜22:00）</span>
+        <span class="hl-meta-item">📍 横浜駅西口 直結</span>
+        <span class="hl-meta-item">💡 カード会員特典が充実。ゴールド会員は駐車場無料</span>
+      </div>
+      <a href="https://www.takashimaya.co.jp/yokohama/" target="_blank" rel="noopener" class="hl-row-link">横浜高島屋 公式サイト →</a>
+    </div>
+  </div>
+</div>
+
+<div class="hl-row" style="background:white;">
+  <div class="hl-row-inner">
+    <div class="hl-row-img">
+      <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="ルミネ横浜 ファッション" loading="lazy">
+    </div>
+    <div class="hl-row-body">
+      <div class="hl-row-num">03</div>
+      <span class="hl-row-icon">✨</span>
+      <h3 class="hl-row-name">ルミネ横浜・ジョイナス</h3>
+      <p class="hl-row-desc">横浜駅直結のファッションビル。若者向けトレンドブランドが集まり、横浜ならではのセレクトが充実しています。ジョイナスは地下に広がる商業施設で飲食店が豊富。横浜駅の地下街とつながっており、雨天でも快適にアクセスできます。カフェ・スイーツの充実度も高い。</p>
+      <div class="hl-row-meta">
+        <span class="hl-meta-item">🕐 11:00〜21:00（一部店舗により異なる）</span>
+        <span class="hl-meta-item">📍 横浜駅 直結（東口・地下）</span>
+        <span class="hl-meta-item">💡 地下フードコートはランチに最適</span>
+      </div>
+      <a href="https://www.lumine.ne.jp/yokohama/" target="_blank" rel="noopener" class="hl-row-link">ルミネ横浜 公式サイト →</a>
+    </div>
+  </div>
+</div>
+
+<div style="padding:0 24px;max-width:1200px;margin:0 auto;">
+  <div class="aff-banner">
+  <div class="aff-banner-inner">
+    <div class="aff-banner-left">
+      <span class="aff-pr">PR</span>
+      <span class="aff-icon">🏨</span>
+      <div>
+        <div class="aff-title">横浜駅周辺のホテルをお得に予約しよう</div>
+        <div class="aff-sub">複数サイトで比較して最安値を見つけよう</div>
+      </div>
+    </div>
+    <div class="aff-btns">
+      <a href="https://hb.afl.rakuten.co.jp/hgc/529afa60.a8148527.529afa61.54d7ba9c/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="nofollow noopener" class="aff-btn aff-btn-rakuten">
+        <span class="aff-btn-logo">楽天</span>楽天トラベルで探す
+      </a>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1EPP+3YW1YQ+14CS+67JUA" target="_blank" rel="nofollow noopener" class="aff-btn aff-btn-jalan">
+        <span class="aff-btn-logo">じゃ</span>じゃらんで探す
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="aff-banner aff-banner-flight">
+  <div class="aff-banner-inner">
+    <div class="aff-banner-left">
+      <span class="aff-pr">PR</span>
+      <span class="aff-icon">✈️</span>
+      <div>
+        <div class="aff-title">横浜への航空券を検索しよう</div>
+        <div class="aff-sub">羽田・成田へのお得なフライトを比較</div>
+      </div>
+    </div>
+    <div class="aff-btns">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1EPP+4HCHPU+AD2+60WN6" target="_blank" rel="nofollow noopener" class="aff-btn aff-btn-airtrip">
+        ✈️ エアトリで航空券を探す
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ===== 施設比較 ===== -->
+<section class="compare-section" id="compare">
+  <div class="container">
+    <div class="s-tag">FACILITY GUIDE</div>
+    <h2 class="s-title">主要施設<em>比較ガイド</em></h2>
+    <p class="s-desc">目的に合わせて施設を選ぼう。横浜駅周辺の主要ショッピング施設を一覧で比較。</p>
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>施設名</th>
+          <th>種別</th>
+          <th>営業時間</th>
+          <th>場所</th>
+          <th>おすすめ用途</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>そごう横浜店</strong></td>
+          <td><span class="tag-dept">百貨店</span></td>
+          <td>10:00〜20:00</td>
+          <td>東口直結</td>
+          <td>土産・食品・ブランド品</td>
+        </tr>
+        <tr>
+          <td><strong>横浜高島屋</strong></td>
+          <td><span class="tag-dept">百貨店</span></td>
+          <td>10:30〜20:00</td>
+          <td>西口直結</td>
+          <td>プレミアム・贈り物</td>
+        </tr>
+        <tr>
+          <td><strong>ルミネ横浜</strong></td>
+          <td><span class="tag-sc">SC</span></td>
+          <td>11:00〜21:00</td>
+          <td>東口直結</td>
+          <td>ファッション・カフェ</td>
+        </tr>
+        <tr>
+          <td><strong>ジョイナス</strong></td>
+          <td><span class="tag-sc">SC</span></td>
+          <td>10:00〜21:00</td>
+          <td>西口地下</td>
+          <td>グルメ・日用品</td>
+        </tr>
+        <tr>
+          <td><strong>アソビル</strong></td>
+          <td><span class="tag-sc">SC</span></td>
+          <td>11:00〜23:00</td>
+          <td>東口徒歩3分</td>
+          <td>エンタメ・体験</td>
+        </tr>
+        <tr>
+          <td><strong>ビブレ</strong></td>
+          <td><span class="tag-sc">SC</span></td>
+          <td>11:00〜21:00</td>
+          <td>西口徒歩3分</td>
+          <td>若者向けカジュアル</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== グルメ ===== -->
+<section class="gourmet-section" id="gourmet">
+  <div class="container">
+    <div class="s-tag">GOURMET</div>
+    <h2 class="s-title">横浜駅周辺<em>グルメガイド</em></h2>
+    <p class="s-desc">デパ地下・フードコートから本格レストランまで。横浜駅周辺はグルメの宝庫。</p>
+    <div class="g-grid">
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=500&amp;auto=format&amp;fit=crop&amp;q=80" alt="デパ地下" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">お土産・テイクアウト</div>
+          <div class="g-name">そごう・高島屋 デパ地下</div>
+          <div class="g-area">📍 横浜駅東口・西口</div>
+          <div class="g-desc">崎陽軒シウマイ・馬車道アイス・横浜中華街の惣菜など横浜名物が集結。お土産はここで。</div>
+          <div class="g-price">¥500〜3,000</div>
+        </div>
+      </div>
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=500&amp;auto=format&amp;fit=crop&amp;q=80" alt="ランチ" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">ランチ</div>
+          <div class="g-name">ジョイナス・ルミネ フードコート</div>
+          <div class="g-area">📍 横浜駅直結</div>
+          <div class="g-desc">和食・洋食・アジア料理まで幅広いジャンルのレストランが集結。ランチタイムはやや混雑。</div>
+          <div class="g-price">¥900〜1,500</div>
+        </div>
+      </div>
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&amp;auto=format&amp;fit=crop&amp;q=80" alt="ディナー" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">ディナー</div>
+          <div class="g-name">そごう レストランフロア</div>
+          <div class="g-area">📍 そごう横浜店 上層階</div>
+          <div class="g-desc">港を望む眺望レストランが揃う。フレンチ・中華・和食と多彩なジャンルでディナーを楽しめる。</div>
+          <div class="g-price">¥3,000〜8,000</div>
+        </div>
+      </div>
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&amp;auto=format&amp;fit=crop&amp;q=80" alt="カフェ" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">カフェ</div>
+          <div class="g-name">駅周辺カフェ各種</div>
+          <div class="g-area">📍 横浜駅各所</div>
+          <div class="g-desc">スターバックス・ドトール・ブルーボトルなど多数のカフェが展開。ショッピングの合間の休憩に。</div>
+          <div class="g-price">¥500〜1,000</div>
+        </div>
+      </div>
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=500&amp;auto=format&amp;fit=crop&amp;q=80" alt="居酒屋" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">夕食・飲み</div>
+          <div class="g-name">西口 飲食街</div>
+          <div class="g-area">📍 横浜駅西口周辺</div>
+          <div class="g-desc">西口には居酒屋・焼き鳥・海鮮など夕食・飲み会向けの飲食店が集まるエリアが形成されている。</div>
+          <div class="g-price">¥2,000〜4,000</div>
+        </div>
+      </div>
+      <div class="g-card">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=500&amp;auto=format&amp;fit=crop&amp;q=80" alt="横浜名物" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-type">横浜名物</div>
+          <div class="g-name">崎陽軒 本店</div>
+          <div class="g-area">📍 横浜駅西口</div>
+          <div class="g-desc">横浜名物シウマイの崎陽軒本店が横浜駅近くに。シウマイ弁当・生シウマイのテイクアウトが人気。</div>
+          <div class="g-price">¥450〜1,100</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 各地へのアクセスハブ ===== -->
+<section class="hub-section" id="hub">
+  <div class="container">
+    <div class="s-tag" style="color:#c4b5fd;">ACCESS HUB</div>
+    <h2 class="s-title" style="color:white;">横浜駅から<em style="color:#c4b5fd;">各地へのアクセス</em></h2>
+    <p class="s-desc" style="color:rgba(255,255,255,0.7);">横浜駅は6路線が乗り入れる横浜最大のターミナル駅。ここを起点に横浜の各観光地へ簡単にアクセスできます。</p>
+    <div class="hub-grid">
+      <div class="hub-card">
+        <span class="hub-icon">🎡</span>
+        <div class="hub-dest">みなとみらい</div>
+        <div class="hub-routes">
+          <div class="hub-route"><span>みなとみらい線</span><span class="hub-time">約4分 / ¥210</span></div>
+          <div class="hub-route"><span>徒歩（汽車道経由）</span><span class="hub-time">約20分</span></div>
+          <div class="hub-route"><span>市営バス</span><span class="hub-time">約10分 / ¥220</span></div>
+        </div>
+      </div>
+      <div class="hub-card">
+        <span class="hub-icon">🥟</span>
+        <div class="hub-dest">中華街・元町</div>
+        <div class="hub-routes">
+          <div class="hub-route"><span>みなとみらい線</span><span class="hub-time">約6分 / ¥260</span></div>
+          <div class="hub-route"><span>JR根岸線（石川町）</span><span class="hub-time">約3分 / ¥150</span></div>
+          <div class="hub-route"><span>あかいくつバス</span><span class="hub-time">約20分 / ¥100</span></div>
+        </div>
+      </div>
+      <div class="hub-card">
+        <span class="hub-icon">🌸</span>
+        <div class="hub-dest">花博会場（上瀬谷）</div>
+        <div class="hub-routes">
+          <div class="hub-route"><span>相鉄線 → 瀬谷駅</span><span class="hub-time">約15分 / ¥230</span></div>
+          <div class="hub-route"><span>瀬谷駅からシャトルバス</span><span class="hub-time">詳細は公式で確認</span></div>
+        </div>
+      </div>
+      <div class="hub-card">
+        <span class="hub-icon">🗼</span>
+        <div class="hub-dest">東京</div>
+        <div class="hub-routes">
+          <div class="hub-route"><span>JR東海道線</span><span class="hub-time">約28分 / ¥480</span></div>
+          <div class="hub-route"><span>京急線 → 品川</span><span class="hub-time">約24分 / ¥290</span></div>
+          <div class="hub-route"><span>東急東横線 → 渋谷</span><span class="hub-time">約26分 / ¥300</span></div>
+        </div>
+      </div>
+      <div class="hub-card">
+        <span class="hub-icon">✈️</span>
+        <div class="hub-dest">羽田空港</div>
+        <div class="hub-routes">
+          <div class="hub-route"><span>京急線 直通</span><span class="hub-time">約30分 / ¥370</span></div>
+          <div class="hub-route"><span>リムジンバス</span><span class="hub-time">約50分</span></div>
+        </div>
+      </div>
+      <div class="hub-card">
+        <span class="hub-icon">⛩️</span>
+        <div class="hub-dest">鎌倉</div>
+        <div class="hub-routes">
+          <div class="hub-route"><span>JR横須賀線</span><span class="hub-time">約24分 / ¥350</span></div>
+          <div class="hub-route"><span>江ノ電との組み合わせも人気</span><span class="hub-time">日帰り観光に最適</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 横浜駅アクセス ===== -->
+<section class="ac-section" id="access">
+  <div class="container">
+    <div class="s-tag">HOW TO GET HERE</div>
+    <h2 class="s-title">横浜駅への<em>アクセス</em></h2>
+    <div class="ac-grid">
+      <div class="ac-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3248.7!2d139.6214!3d35.4658!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185c1f4f93e1f7%3A0xabcdef!2z5qCq5byP5Lya56S-6a2a!5e0!3m2!1sja!2sjp!4v1680000000000" allowfullscreen="" loading="lazy" title="横浜駅マップ"></iframe>
+      </div>
+      <div class="ac-cards">
+        <div class="ac-card">
+          <div class="ac-card-title">🚃 主要アクセス</div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>JR東海道線・横須賀線 / 京急本線 / 東急東横線</span><span class="ac-time">6路線が乗り入れる横浜最大のターミナル駅</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>東京駅から東海道線で約28分（¥480）</span><span class="ac-time">品川から京急で約24分（¥290）</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>渋谷から東急東横線で約26分（¥300）</span></div></div>
+        </div>
+        <div class="ac-card">
+          <div class="ac-card-title">✈️ 空港からのアクセス</div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>羽田空港から京急で約30分（¥370）</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>成田空港から成田エクスプレスで約90分（¥4,370）</span></div></div>
+        </div>
+        <div class="ac-card">
+          <div class="ac-card-title">🚗 駐車場情報</div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>そごう・高島屋など各施設に有料駐車場あり</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>買い物で駐車料金無料サービス（施設により異なる）</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">YOKOHAMA</div>
+  <a href="index.html" class="footer-back">← 横浜旅行ガイドに戻る</a>
+  <div class="footer-bottom">© 2026 YOKOHAMA GUIDE. All rights reserved. | Photos: <a href="https://unsplash.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Unsplash</a> | 掲載情報は変更になる場合があります。</div>
+</footer>
+
+<script>
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.pn');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+  navLinks.forEach(a => { a.classList.remove('active'); if (a.getAttribute('href') === '#' + cur) a.classList.add('active'); });
+});
+function setLang(l, btn) {
+  document.querySelectorAll('.lb').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const fm = {ja:"'DM Sans','Noto Sans JP',sans-serif",en:"'DM Sans',sans-serif",zh:"'DM Sans','Noto Sans SC',sans-serif",ko:"'DM Sans','Noto Sans KR',sans-serif"};
+  document.body.style.fontFamily = fm[l] || fm.ja;
+}
+</script>
+</body>
+</html>

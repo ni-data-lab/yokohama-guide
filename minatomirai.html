@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>みなとみらい完全ガイド — YOKOHAMA GUIDE</title>
+<meta name="description" content="みなとみらいの見どころ・夜景スポット・グルメ・アクセスを1ページで完全網羅。コスモクロック21・ランドマークタワー・赤レンガ倉庫の情報も。">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&family=DM+Sans:wght@300;400;500;600&display=swap');
+:root{
+  --sky:#0ea5e9;--sky-light:#e0f2fe;--ocean:#0369a1;--navy:#0c2d57;
+  --green:#10b981;--green-dark:#065f46;--coral:#f97316;--sand:#fef3c7;
+  --white:#fff;--gray-light:#f1f5f9;--text:#0f172a;--muted:#64748b;
+  --shadow:0 4px 24px rgba(14,165,233,0.1);--shadow-lg:0 12px 48px rgba(14,165,233,0.18);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans','Noto Sans JP',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+img{max-width:100%;height:auto;display:block;}
+
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(14,165,233,0.1);height:58px;display:flex;align-items:center;padding:0 24px;gap:16px;}
+.logo{font-family:'Playfair Display',serif;font-size:18px;font-weight:900;color:var(--ocean);text-decoration:none;}
+.logo em{color:var(--sky);font-style:normal;}
+.header-nav{display:flex;gap:2px;flex:1;justify-content:center;}
+.header-nav a{color:var(--muted);font-size:12px;font-weight:500;padding:5px 10px;border-radius:5px;text-decoration:none;transition:all 0.15s;white-space:nowrap;}
+.header-nav a:hover{background:var(--sky-light);color:var(--ocean);}
+.lang-sw{display:flex;gap:3px;flex-shrink:0;}
+.lb{font-size:10px;font-weight:700;padding:3px 7px;border:1px solid rgba(14,165,233,0.2);border-radius:4px;background:transparent;color:var(--muted);cursor:pointer;transition:all 0.15s;}
+.lb.active{background:var(--sky);color:white;border-color:var(--sky);}
+
+/* HERO */
+.hero{height:80vh;position:relative;display:flex;align-items:flex-end;overflow:hidden;margin-top:58px;}
+.hero-bg{position:absolute;inset:0;}
+.hero-bg img{width:100%;height:100%;object-fit:cover;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,20,50,0.85) 0%,rgba(0,20,50,0.3) 50%,rgba(0,0,0,0.1) 100%);}
+.hero-content{position:relative;z-index:1;padding:48px 48px;max-width:900px;width:100%;}
+.hero-breadcrumb{font-size:11px;color:rgba(255,255,255,0.6);margin-bottom:12px;letter-spacing:0.06em;}
+.hero-breadcrumb a{color:rgba(255,255,255,0.6);text-decoration:none;}
+.hero-breadcrumb a:hover{color:white;}
+.hero-tag{display:inline-block;background:var(--sky);color:white;font-size:11px;font-weight:700;letter-spacing:0.1em;padding:4px 14px;border-radius:99px;margin-bottom:14px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(38px,7vw,68px);font-weight:900;color:white;line-height:1.0;margin-bottom:14px;text-shadow:0 2px 20px rgba(0,0,0,0.3);}
+.hero h1 em{color:#7dd3fc;font-style:normal;}
+.hero-sub{font-size:15px;color:rgba(255,255,255,0.85);line-height:1.75;margin-bottom:28px;max-width:560px;}
+.hero-stats{display:flex;gap:14px;flex-wrap:wrap;}
+.hs{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);backdrop-filter:blur(8px);border-radius:10px;padding:10px 18px;text-align:center;}
+.hs-val{font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:white;display:block;}
+.hs-label{font-size:10px;color:rgba(255,255,255,0.6);letter-spacing:0.06em;}
+
+/* PAGE NAV */
+.page-nav{background:white;border-bottom:2px solid var(--gray-light);position:sticky;top:58px;z-index:90;overflow-x:auto;}
+.page-nav-inner{max-width:1200px;margin:0 auto;display:flex;}
+.pn{padding:13px 20px;font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap;transition:all 0.15s;display:block;}
+.pn:hover,.pn.active{color:var(--sky);border-bottom-color:var(--sky);}
+
+/* COMMON */
+section{padding:64px 24px;}
+.container{max-width:1200px;margin:0 auto;}
+.s-tag{font-size:11px;font-weight:700;letter-spacing:0.12em;color:var(--sky);text-transform:uppercase;margin-bottom:8px;}
+.s-title{font-family:'Playfair Display',serif;font-size:clamp(24px,4vw,36px);font-weight:900;color:var(--text);line-height:1.2;margin-bottom:12px;}
+.s-title em{color:var(--sky);font-style:normal;}
+.s-desc{font-size:14px;color:var(--muted);line-height:1.8;max-width:640px;}
+.ad-box{background:var(--sand);border:1px solid rgba(249,115,22,0.2);border-radius:12px;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;margin:28px 0;flex-wrap:wrap;}
+.ad-label{font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;}
+.ad-text{font-size:14px;font-weight:600;color:var(--text);}
+.ad-btn{background:var(--coral);color:white;font-size:13px;font-weight:700;padding:9px 20px;border-radius:99px;text-decoration:none;transition:all 0.15s;white-space:nowrap;}
+.ad-btn:hover{opacity:0.88;transform:translateY(-1px);}
+
+/* ===== HIGHLIGHT ROWS（横長セクション型） ===== */
+.hl-row{padding:56px 0;}
+.hl-row-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;}
+.hl-row-reverse{direction:rtl;}
+.hl-row-reverse>*{direction:ltr;}
+.hl-row-img{border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);}
+.hl-row-img img{width:100%;height:360px;object-fit:cover;display:block;transition:transform 0.5s;}
+.hl-row-img:hover img{transform:scale(1.03);}
+.hl-row-num{font-family:'Playfair Display',serif;font-size:56px;font-weight:900;color:var(--sky-light);line-height:1;margin-bottom:4px;}
+.hl-row-icon{font-size:32px;margin-bottom:8px;display:block;}
+.hl-row-name{font-family:'Playfair Display',serif;font-size:clamp(20px,2.5vw,26px);font-weight:900;color:var(--text);margin-bottom:8px;line-height:1.2;}
+.hl-row-badge{display:inline-block;background:var(--sky);color:white;font-size:10px;font-weight:700;letter-spacing:0.08em;padding:3px 10px;border-radius:99px;margin-bottom:14px;}
+.hl-row-desc{font-size:14px;color:#334155;line-height:1.85;margin-bottom:20px;}
+.hl-row-meta{display:flex;flex-direction:column;gap:7px;margin-bottom:20px;}
+.hl-meta-item{font-size:12px;color:var(--muted);display:flex;align-items:center;gap:4px;}
+.hl-row-link{display:inline-flex;align-items:center;gap:6px;background:transparent;color:var(--sky);font-size:13px;font-weight:700;padding:9px 18px;border-radius:8px;text-decoration:none;border:2px solid var(--sky);transition:all 0.2s;}
+.hl-row-link:hover{background:var(--sky);color:white;transform:translateY(-2px);}
+
+/* ===== SECTION 1: スポット一覧 ===== */
+.spots-section{background:var(--gray-light);}
+.spots-section>.container{padding-bottom:0;}
+
+/* ===== SECTION 2: 夜景ガイド ===== */
+.night-section{background:var(--navy);padding:72px 24px;}
+.night-title{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);font-weight:900;color:white;margin-bottom:10px;}
+.night-title em{color:#7dd3fc;font-style:normal;}
+.night-desc{font-size:14px;color:rgba(255,255,255,0.7);line-height:1.8;margin-bottom:40px;max-width:600px;}
+.night-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;}
+.night-card{background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:22px;transition:all 0.2s;}
+.night-card:hover{background:rgba(255,255,255,0.1);transform:translateY(-3px);}
+.night-icon{font-size:32px;margin-bottom:12px;display:block;}
+.night-spot{font-size:14px;font-weight:700;color:white;margin-bottom:6px;}
+.night-detail{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.7;}
+.night-rating{display:flex;gap:3px;margin-top:10px;}
+.star{color:#fbbf24;font-size:13px;}
+
+/* ===== SECTION 3: 観光モデルコース ===== */
+.course-section{background:white;}
+.course-tabs{display:flex;gap:8px;margin-bottom:32px;flex-wrap:wrap;}
+.ct{background:var(--gray-light);border:1px solid transparent;color:var(--muted);font-size:12px;font-weight:600;padding:7px 16px;border-radius:99px;cursor:pointer;transition:all 0.15s;}
+.ct.active{background:var(--sky-light);border-color:var(--sky);color:var(--ocean);}
+.course-content{display:none;}
+.course-content.active{display:block;}
+.timeline{display:flex;flex-direction:column;gap:0;}
+.tl-item{display:flex;gap:20px;padding:16px 0;border-bottom:1px solid var(--gray-light);}
+.tl-item:last-child{border:none;}
+.tl-time{width:60px;flex-shrink:0;text-align:right;}
+.tl-time-val{font-family:'Playfair Display',serif;font-size:16px;font-weight:900;color:var(--sky);}
+.tl-time-sub{font-size:10px;color:var(--muted);}
+.tl-line{width:2px;background:var(--sky-light);border-radius:99px;position:relative;flex-shrink:0;}
+.tl-dot{width:12px;height:12px;background:var(--sky);border-radius:50%;position:absolute;top:4px;left:-5px;box-shadow:0 0 0 3px var(--sky-light);}
+.tl-body{flex:1;padding-bottom:8px;}
+.tl-spot{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.tl-desc{font-size:12px;color:var(--muted);line-height:1.7;}
+.tl-tags{display:flex;gap:6px;margin-top:8px;flex-wrap:wrap;}
+.tl-tag{font-size:10px;padding:2px 8px;border-radius:99px;background:var(--sky-light);color:var(--ocean);}
+
+/* ===== SECTION 4: グルメ ===== */
+.gourmet-section{background:var(--gray-light);}
+.gourmet-filter{display:flex;gap:8px;margin-bottom:24px;flex-wrap:wrap;}
+.gf{background:white;border:1px solid transparent;color:var(--muted);font-size:12px;font-weight:600;padding:6px 14px;border-radius:99px;cursor:pointer;transition:all 0.15s;}
+.gf.active{background:var(--sky-light);border-color:var(--sky);color:var(--ocean);}
+.gourmet-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.g-card{background:white;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);transition:all 0.2s;display:none;}
+.g-card.show{display:block;}
+.g-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);}
+.g-img{height:140px;overflow:hidden;}
+.g-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.4s;}
+.g-card:hover .g-img img{transform:scale(1.06);}
+.g-body{padding:14px;}
+.g-scene{font-size:10px;font-weight:700;letter-spacing:0.1em;color:var(--coral);text-transform:uppercase;margin-bottom:4px;}
+.g-name{font-size:13px;font-weight:700;color:var(--text);margin-bottom:3px;}
+.g-area{font-size:11px;color:var(--muted);margin-bottom:5px;}
+.g-price{font-size:12px;color:var(--coral);font-weight:700;}
+.g-tags{display:flex;gap:4px;margin-top:6px;flex-wrap:wrap;}
+.g-tag{font-size:10px;padding:2px 6px;border-radius:99px;background:var(--gray-light);color:var(--muted);}
+
+/* ===== SECTION 5: MAP + ACCESS ===== */
+.map-section{background:white;padding:0;}
+.map-header{padding:64px 24px 24px;max-width:1200px;margin:0 auto;}
+.map-embed{width:100%;height:420px;border:0;display:block;}
+.access-cards{max-width:1200px;margin:0 auto;padding:24px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.ac{background:var(--gray-light);border-radius:12px;padding:18px;}
+.ac-icon{font-size:28px;margin-bottom:10px;display:block;}
+.ac-title{font-size:13px;font-weight:700;color:var(--ocean);margin-bottom:10px;}
+.ac-row{display:flex;gap:7px;margin-bottom:7px;}
+.ac-dot{width:6px;height:6px;border-radius:50%;background:var(--sky);flex-shrink:0;margin-top:5px;}
+.ac-text{font-size:11px;color:var(--muted);line-height:1.6;}
+.ac-time{font-size:10px;color:var(--sky);font-weight:700;display:block;margin-top:1px;}
+
+/* ===== SECTION 6: シーズン情報 ===== */
+.season-section{background:var(--gray-light);}
+.season-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:32px;}
+.season-card{background:white;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+.season-img{height:140px;overflow:hidden;}
+.season-img img{width:100%;height:100%;object-fit:cover;}
+.season-body{padding:14px;}
+.season-icon{font-size:24px;margin-bottom:6px;display:block;}
+.season-name{font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px;}
+.season-period{font-size:11px;color:var(--sky);font-weight:600;margin-bottom:8px;display:block;}
+.season-event{font-size:11px;color:var(--muted);line-height:1.7;}
+
+/* ===== SECTION 7: 実用情報 ===== */
+.info-section{background:white;}
+.info-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;margin-top:32px;}
+.info-card{border-radius:12px;overflow:hidden;border:1px solid rgba(14,165,233,0.12);}
+.info-head{background:var(--ocean);color:white;padding:14px 18px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;}
+.info-body{padding:16px 18px;}
+.info-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid var(--gray-light);font-size:12px;}
+.info-row:last-child{border:none;}
+.info-key{color:var(--muted);}
+.info-val{font-weight:600;color:var(--text);}
+.info-val.free{color:var(--green);}
+.info-val.paid{color:var(--coral);}
+
+/* FOOTER */
+footer{background:#0f172a;color:rgba(255,255,255,0.6);padding:40px 24px 24px;text-align:center;}
+.footer-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:white;margin-bottom:10px;}
+.footer-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);font-size:13px;font-weight:500;padding:8px 18px;border-radius:99px;text-decoration:none;margin-bottom:20px;transition:all 0.15s;}
+.footer-back:hover{background:rgba(255,255,255,0.15);color:white;}
+.footer-bottom{font-size:11px;color:rgba(255,255,255,0.3);border-top:1px solid rgba(255,255,255,0.08);padding-top:14px;margin-top:16px;}
+
+@media(max-width:1024px){
+  .hl-row-inner{gap:32px;}
+  .hl-row-img img{height:280px;}
+  .night-grid,.season-grid{grid-template-columns:1fr 1fr;}
+  .gourmet-grid{grid-template-columns:1fr 1fr;}
+  .access-cards{grid-template-columns:1fr 1fr;}
+  .info-grid{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:700px){
+  .hl-row{padding:36px 0;}
+  .hl-row-inner{grid-template-columns:1fr;}
+  .hl-row-reverse{direction:ltr;}
+  .hl-row-img img{height:220px;}
+  .hl-row-num{font-size:40px;}
+  .gourmet-grid,.season-grid,.info-grid{grid-template-columns:1fr;}
+  .night-grid{grid-template-columns:1fr 1fr;}
+  .access-cards{grid-template-columns:1fr 1fr;}
+  .hero-content{padding:32px 20px;}
+  .header-nav{display:none;}
+}
+
+/* ===== アフィリエイトバナー ===== */
+.aff-banner{background:linear-gradient(135deg,#fff8f0,#fff3e8);border:2px solid #f97316;border-radius:14px;padding:20px 24px;margin:32px 0;}
+.aff-banner-flight{background:linear-gradient(135deg,#f0f7ff,#e8f2ff);border-color:#0ea5e9;}
+.aff-banner-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.aff-banner-left{display:flex;align-items:center;gap:12px;}
+.aff-pr{font-size:10px;font-weight:700;letter-spacing:0.1em;color:#fff;background:#f97316;padding:2px 7px;border-radius:4px;flex-shrink:0;}
+.aff-banner-flight .aff-pr{background:#0ea5e9;}
+.aff-icon{font-size:32px;flex-shrink:0;}
+.aff-title{font-size:15px;font-weight:700;color:#0f172a;margin-bottom:3px;}
+.aff-sub{font-size:12px;color:#64748b;}
+.aff-btns{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0;}
+.aff-btn{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;padding:11px 20px;border-radius:99px;text-decoration:none;transition:all 0.2s;white-space:nowrap;}
+.aff-btn:hover{transform:translateY(-2px);opacity:0.92;}
+.aff-btn-logo{font-size:11px;font-weight:900;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+.aff-btn-rakuten{background:#bf0000;color:#fff;}
+.aff-btn-rakuten .aff-btn-logo{background:#fff;color:#bf0000;}
+.aff-btn-jalan{background:#f97316;color:#fff;}
+.aff-btn-jalan .aff-btn-logo{background:#fff;color:#f97316;}
+.aff-btn-airtrip{background:#0ea5e9;color:#fff;}
+@media(max-width:700px){
+  .aff-banner-inner{flex-direction:column;align-items:flex-start;}
+  .aff-btns{width:100%;}
+  .aff-btn{flex:1;justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">YOKO<em>HAMA</em></a>
+  <nav class="header-nav">
+    <a href="#spots">見どころ</a>
+    <a href="#nightview">夜景</a>
+    <a href="#course">モデルコース</a>
+    <a href="#gourmet">グルメ</a>
+    <a href="#map">アクセス</a>
+    <a href="#season">季節</a>
+  </nav>
+  <div class="lang-sw">
+    <button class="lb active" onclick="setLang('ja',this)">JA</button>
+    <button class="lb" onclick="setLang('en',this)">EN</button>
+    <button class="lb" onclick="setLang('zh',this)">中文</button>
+    <button class="lb" onclick="setLang('ko',this)">한국어</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1635840141823-e32a6f092ff5?w=1800&amp;auto=format&amp;fit=crop&amp;q=85" alt="みなとみらい夜景">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-breadcrumb"><a href="index.html">YOKOHAMA GUIDE</a> › みなとみらい</div>
+    <div class="hero-tag">MINATO MIRAI 21</div>
+    <h1>みなとみらい<br><em>完全ガイド</em></h1>
+    <p class="hero-sub">横浜を代表する臨海副都心。大観覧車・展望台・美術館・ショッピング・港クルーズ・夜景まで、1ページで全部わかる完全ガイド。</p>
+    <div class="hero-stats">
+      <div class="hs"><span class="hs-val">24H</span><span class="hs-label">楽しめる</span></div>
+      <div class="hs"><span class="hs-val">5分</span><span class="hs-label">桜木町駅から</span></div>
+      <div class="hs"><span class="hs-val">無料</span><span class="hs-label">エリア入場</span></div>
+      <div class="hs"><span class="hs-val">夕〜夜</span><span class="hs-label">おすすめ時間</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE NAV -->
+<div class="page-nav">
+  <div class="page-nav-inner">
+    <a href="#spots" class="pn active">🎡 見どころ</a>
+    <a href="#nightview" class="pn">🌙 夜景スポット</a>
+    <a href="#course" class="pn">🗺️ モデルコース</a>
+    <a href="#gourmet" class="pn">🍽️ グルメ</a>
+    <a href="#map" class="pn">🚃 アクセス</a>
+    <a href="#season" class="pn">🌸 季節情報</a>
+    <a href="#info" class="pn">ℹ️ 実用情報</a>
+  </div>
+</div>
+
+<!-- ===== 見どころ ===== -->
+<section class="spots-section" id="spots">
+  <div class="container">
+    <div class="s-tag">HIGHLIGHTS</div>
+    <h2 class="s-title">みなとみらいの<em>見どころ</em></h2>
+    <p class="s-desc">観覧車・展望台・美術館・赤レンガ倉庫…みなとみらいは一日では回りきれないほど見どころが凝縮した横浜随一のエリア。各スポットの詳細は公式サイトも合わせてご確認ください。</p>
+  </div>
+
+  <!-- 01 コスモクロック -->
+  <div class="hl-row" style="background:white;">
+    <div class="container">
+      <div class="hl-row-inner">
+        <div class="hl-row-img">
+          <img src="https://images.unsplash.com/photo-1766732931915-ca3c4909f8c9?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="コスモクロック21" loading="lazy">
+        </div>
+        <div class="hl-row-body">
+          <div class="hl-row-num">01</div>
+          <div class="hl-row-icon">🎡</div>
+          <h3 class="hl-row-name">コスモクロック21（大観覧車）</h3>
+          <div class="hl-row-badge">人気No.1</div>
+          <p class="hl-row-desc">高さ112.5mの大観覧車。1周約15分で横浜港・みなとみらい・ベイブリッジを360度眺望できます。夜はLEDイルミネーションで輝き、横浜の夜景に欠かせない存在。カップルや家族連れに特に人気が高く、日没後30分からが最もロマンチックな時間帯です。</p>
+          <div class="hl-row-meta">
+            <span class="hl-meta-item">💰 大人¥900 / 子供¥500</span>
+            <span class="hl-meta-item">🕐 営業時間：11:00〜21:00（季節変動あり）</span>
+            <span class="hl-meta-item">📍 みなとみらい駅 徒歩3分</span>
+          </div>
+          <a href="https://cosmoworld.jp/" target="_blank" rel="noopener" class="hl-row-link">公式サイトを見る →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 02 ランドマークタワー -->
+  <div class="hl-row" style="background:var(--gray-light);">
+    <div class="container">
+      <div class="hl-row-inner hl-row-reverse">
+        <div class="hl-row-img">
+          <img src="https://images.unsplash.com/photo-1549016133-a371c65fa48f?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="ランドマークタワー" loading="lazy">
+        </div>
+        <div class="hl-row-body">
+          <div class="hl-row-num">02</div>
+          <div class="hl-row-icon">🏙️</div>
+          <h3 class="hl-row-name">ランドマークタワー スカイガーデン</h3>
+          <p class="hl-row-desc">高さ273mの展望フロア「スカイガーデン」は横浜随一の絶景スポット。晴れた日には富士山・東京スカイツリー・房総半島まで見渡せます。日本最速クラスのエレベーターで地上69階まで約40秒。夜景も非常に美しく、昼夜どちらも楽しめます。</p>
+          <div class="hl-row-meta">
+            <span class="hl-meta-item">💰 大人¥1,000 / 子供¥500</span>
+            <span class="hl-meta-item">🕐 10:00〜21:00（月により変動）</span>
+            <span class="hl-meta-item">📍 みなとみらい駅 直結</span>
+          </div>
+          <a href="https://www.yokohama-landmark.jp/skygarden/" target="_blank" rel="noopener" class="hl-row-link">公式サイトを見る →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 03 赤レンガ倉庫 -->
+  <div class="hl-row" style="background:white;">
+    <div class="container">
+      <div class="hl-row-inner">
+        <div class="hl-row-img">
+          <img src="https://images.unsplash.com/photo-1541036734234-c7ce16051483?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="赤レンガ倉庫" loading="lazy">
+        </div>
+        <div class="hl-row-body">
+          <div class="hl-row-num">03</div>
+          <div class="hl-row-icon">🧱</div>
+          <h3 class="hl-row-name">横浜赤レンガ倉庫</h3>
+          <p class="hl-row-desc">明治・大正時代の歴史的建造物を活用した複合商業施設。横浜港を一望できるテラスやイベント広場が人気で、ショップ・レストランが充実しています。年間を通じてクリスマスマーケット・夏のビアガーデンなど季節イベントが開催され、夜のライトアップも見事です。入場は無料。</p>
+          <div class="hl-row-meta">
+            <span class="hl-meta-item">💰 入場無料（施設利用は別途）</span>
+            <span class="hl-meta-item">🕐 10:00〜20:00（イベント時は延長）</span>
+            <span class="hl-meta-item">📍 馬車道駅 / 日本大通り駅 徒歩6分</span>
+          </div>
+          <a href="https://www.yokohama-akarenga.jp/" target="_blank" rel="noopener" class="hl-row-link">公式サイトを見る →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 04 横浜美術館 -->
+  <div class="hl-row" style="background:var(--gray-light);">
+    <div class="container">
+      <div class="hl-row-inner hl-row-reverse">
+        <div class="hl-row-img">
+          <img src="https://images.unsplash.com/photo-1518998053901-5348d3961a04?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="横浜美術館" loading="lazy">
+        </div>
+        <div class="hl-row-body">
+          <div class="hl-row-num">04</div>
+          <div class="hl-row-icon">🎨</div>
+          <h3 class="hl-row-name">横浜美術館</h3>
+          <p class="hl-row-desc">近現代美術を中心に約1万3千点のコレクションを誇る横浜市立美術館。国内外の企画展も年間を通じて充実しており、アート好きには必訪スポットです。みなとみらい駅と地下直結なので雨の日でも快適にアクセスできます。ミュージアムショップのグッズもユニークです。</p>
+          <div class="hl-row-meta">
+            <span class="hl-meta-item">💰 常設展¥500 / 企画展は別途</span>
+            <span class="hl-meta-item">🕐 10:00〜18:00（月曜休館）</span>
+            <span class="hl-meta-item">📍 みなとみらい駅 直結</span>
+          </div>
+          <a href="https://yokohama.art.museum/" target="_blank" rel="noopener" class="hl-row-link">公式サイトを見る →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 05 横浜港クルーズ -->
+  <div class="hl-row" style="background:white;">
+    <div class="container">
+      <div class="hl-row-inner">
+        <div class="hl-row-img">
+          <img src="https://images.unsplash.com/photo-1772443870609-abb7bd3ac626?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="横浜港クルーズ" loading="lazy">
+        </div>
+        <div class="hl-row-body">
+          <div class="hl-row-num">05</div>
+          <div class="hl-row-icon">⛵</div>
+          <h3 class="hl-row-name">横浜港クルーズ</h3>
+          <p class="hl-row-desc">大さん橋・山下公園から出発する観光クルーズ船。ベイブリッジ・みなとみらい・工業地帯を海上から楽しめます。昼のランチクルーズ、夕暮れのサンセットクルーズ、夜景クルーズとシーン別に選べます。陸から見る景色とはまた違う横浜の魅力を発見できます。</p>
+          <div class="hl-row-meta">
+            <span class="hl-meta-item">💰 ¥1,500〜（コースにより異なる）</span>
+            <span class="hl-meta-item">🕐 所要約40〜120分（コースにより異なる）</span>
+            <span class="hl-meta-item">📍 大さん橋 / 山下公園 発着</span>
+          </div>
+          <a href="https://www.yokohama-cruise.com/" target="_blank" rel="noopener" class="hl-row-link">公式サイトを見る →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 06 MARK IS -->
+  <div class="hl-row" style="background:var(--gray-light);">
+    <div class="container">
+      <div class="hl-row-inner hl-row-reverse">
+        <div class="hl-row-img">
+          <img src="https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="MARK IS みなとみらい" loading="lazy">
+        </div>
+        <div class="hl-row-body">
+          <div class="hl-row-num">06</div>
+          <div class="hl-row-icon">🛍️</div>
+          <h3 class="hl-row-name">MARK IS みなとみらい</h3>
+          <p class="hl-row-desc">約160店舗が入る横浜最大級のショッピングモール。ファッション・雑貨・レストラン・映画館まで一つの建物で揃います。地下5階・地上6階の大規模施設で、雨の日の観光に最適。ランドマークタワーやクイーンズスクエアと連結しており、一日いても飽きません。</p>
+          <div class="hl-row-meta">
+            <span class="hl-meta-item">💰 入場無料</span>
+            <span class="hl-meta-item">🕐 10:00〜21:00（レストランは〜23:00）</span>
+            <span class="hl-meta-item">📍 みなとみらい駅 直結</span>
+          </div>
+          <a href="https://www.mec-markis.jp/mm/" target="_blank" rel="noopener" class="hl-row-link">公式サイトを見る →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- ===== 夜景スポット ===== -->
+<section class="night-section" id="nightview">
+  <div class="container">
+    <div class="s-tag" style="color:#7dd3fc;">NIGHT VIEW</div>
+    <h2 class="night-title">みなとみらいの<em>夜景スポット</em></h2>
+    <p class="night-desc">横浜の夜景は日本三大夜景のひとつ。みなとみらいだけでも複数の絶景スポットがある。日没から1時間後が最も美しい「ブルーアワー」を狙おう。</p>
+    <div class="night-grid">
+      <div class="night-card">
+        <span class="night-icon">🎡</span>
+        <div class="night-spot">コスモクロック21</div>
+        <div class="night-detail">観覧車そのものがライトアップ。乗りながら見る横浜夜景は格別。カップル人気No.1スポット。</div>
+        <div class="night-rating"><span class="star">★★★★★</span></div>
+      </div>
+      <div class="night-card">
+        <span class="night-icon">🏙️</span>
+        <div class="night-spot">スカイガーデン展望台</div>
+        <div class="night-detail">273mの高さから見下ろす夜景。横浜港全体・ベイブリッジ・東京方面まで一望できる最上級の夜景。</div>
+        <div class="night-rating"><span class="star">★★★★★</span></div>
+      </div>
+      <div class="night-card">
+        <span class="night-icon">🌉</span>
+        <div class="night-spot">大さん橋 屋上</div>
+        <div class="night-detail">客船ターミナルの屋上は無料の展望スペース。みなとみらい全体を地上から眺める最高のビューポイント。深夜まで開放。</div>
+        <div class="night-rating"><span class="star">★★★★☆</span></div>
+      </div>
+      <div class="night-card">
+        <span class="night-icon">🧱</span>
+        <div class="night-spot">赤レンガ倉庫前広場</div>
+        <div class="night-detail">倉庫とみなとみらいの高層ビル群が同時に見える絶景ポイント。インスタ映えスポットとして超人気。</div>
+        <div class="night-rating"><span class="star">★★★★☆</span></div>
+      </div>
+    </div>
+    <div style="margin-top:24px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:12px;padding:18px 24px;">
+      <div style="font-size:13px;font-weight:700;color:white;margin-bottom:8px;">🌙 夜景ベストタイム</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.7);line-height:1.8;">
+        日没直後（18:00〜19:00頃・季節により変動）から約1時間が「ブルーアワー」と呼ばれる最も美しい時間帯。空が濃紺〜藍色に染まり、ビルの明かりとのコントラストが最高に。その後は完全な夜景に。いずれの時間帯も美しいが、特にブルーアワーは写真映えする。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== モデルコース ===== -->
+<section class="course-section" id="course">
+  <div class="container">
+    <div class="s-tag">MODEL COURSE</div>
+    <h2 class="s-title">みなとみらい<em>モデルコース</em></h2>
+    <p class="s-desc">目的・時間・人数に合わせた3つのモデルコース。そのまま使える行程をご用意。</p>
+    <div class="course-tabs" style="margin-top:24px;">
+      <div class="ct active" onclick="setCourse('half',this)">⏱️ 半日コース（4時間）</div>
+      <div class="ct" onclick="setCourse('full',this)">🌅 1日コース</div>
+      <div class="ct" onclick="setCourse('night',this)">🌙 夜景コース（3時間）</div>
+    </div>
+
+    <div class="course-content active" id="course-half">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time"><div class="tl-time-val">10:00</div><div class="tl-time-sub">出発</div></div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body"><div class="tl-spot">桜木町駅 or みなとみらい駅 到着</div><div class="tl-desc">JR・地下鉄・みなとみらい線のいずれかでアクセス。駅周辺にコインロッカーあり。</div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time"><div class="tl-time-val">10:15</div><div class="tl-time-sub">30分</div></div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body"><div class="tl-spot">コスモワールド・大観覧車</div><div class="tl-desc">午前中は比較的空いているので観覧車の待ち時間が少ない。まず乗っておくのがおすすめ。</div><div class="tl-tags"><span class="tl-tag">¥900</span><span class="tl-tag">約15分</span></div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time"><div class="tl-time-val">11:00</div><div class="tl-time-sub">60分</div></div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body"><div class="tl-spot">赤レンガ倉庫 散策 + ランチ</div><div class="tl-desc">倉庫内のショップを見ながら散策。テラス席でランチを楽しむのも◎。港を眺めながらの食事は格別。</div><div class="tl-tags"><span class="tl-tag">入場無料</span><span class="tl-tag">¥1,200〜</span></div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time"><div class="tl-time-val">12:30</div><div class="tl-time-sub">60分</div></div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body"><div class="tl-spot">ランドマークタワー スカイガーデン</div><div class="tl-desc">昼間は富士山が見えることも。展望フロアを楽しんだ後はクイーンズスクエアでショッピング。</div><div class="tl-tags"><span class="tl-tag">¥1,000</span><span class="tl-tag">所要40分</span></div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time"><div class="tl-time-val">14:00</div><div class="tl-time-sub">終了</div></div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body"><div class="tl-spot">MARK ISでショッピング→帰路 or 中華街へ</div><div class="tl-desc">半日コース終了。そのまま帰るか、みなとみらい線で中華街・元町へ移動するのもおすすめ。</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-content" id="course-full">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time"><div class="tl-time-val">9:30</div><div class="tl-time-sub">出発</div></div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body"><div class="tl-spot">横浜美術館（開館直後）</div><div class="tl-desc">開館直後は空いており快適に鑑賞できる。企画展の開催情報は事前に確認を。</div><div class="tl-tags"><span class="tl-tag">常設展¥500</span></div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time"><div class="tl-time-val">11:00</div><div class="tl-time-sub">90分</div></div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body"><div class="tl-spot">コスモワールド + 大観覧車</div><div class="tl-desc">遊園地エリアを散策しながら観覧車へ。周辺の汽車道も景色がよく散歩に最適。</div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time"><div class="tl-time-val">12:30</div><div class="tl-time-sub">60分</div></div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body"><div class="tl-spot">赤レンガ倉庫ランチ + テラス散策</div><div class="tl-desc">倉庫内のレストランか、近くのハンマーヘッドで新鮮なシーフードランチ。食後は港の風を感じながら散策。</div><div class="tl-tags"><span class="tl-tag">¥1,500〜</span></div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time"><div class="tl-time-val">14:00</div><div class="tl-time-sub">60分</div></div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body"><div class="tl-spot">ランドマークタワー展望台</div><div class="tl-desc">高速エレベーターで273mの展望フロアへ。展望後はクイーンズスクエアでショッピング。</div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time"><div class="tl-time-val">16:00</div><div class="tl-time-sub">60分</div></div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body"><div class="tl-spot">大さん橋でサンセット待機</div><div class="tl-desc">客船ターミナルの屋上は無料。日没1時間前から場所を確保してサンセットとブルーアワーを狙う。</div><div class="tl-tags"><span class="tl-tag">無料</span><span class="tl-tag">必見</span></div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time"><div class="tl-time-val">18:30</div><div class="tl-time-sub">夜</div></div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body"><div class="tl-spot">夜景ディナー or 夜景クルーズ</div><div class="tl-desc">スカイラウンジで夜景ディナー（要予約・¥8,000〜）、または夜景クルーズ（¥3,000〜）でみなとみらいの夜を満喫。</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="course-content" id="course-night">
+      <div class="timeline">
+        <div class="tl-item">
+          <div class="tl-time"><div class="tl-time-val">17:30</div><div class="tl-time-sub">集合</div></div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body"><div class="tl-spot">桜木町駅集合 → 大さん橋へ</div><div class="tl-desc">まず大さん橋の屋上へ。日没前から場所を確保して、ブルーアワーのみなとみらいを撮影。</div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time"><div class="tl-time-val">18:00</div><div class="tl-time-sub">60分</div></div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body"><div class="tl-spot">大さん橋 → 赤レンガ倉庫 散策</div><div class="tl-desc">ライトアップされた赤レンガ倉庫と夜景の組み合わせは最高の映えスポット。三脚があるとさらによい写真が撮れる。</div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time"><div class="tl-time-val">19:30</div><div class="tl-time-sub">30分</div></div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body"><div class="tl-spot">夜の大観覧車（コスモクロック21）</div><div class="tl-desc">夜のライトアップ観覧車に乗車。眼下に広がる横浜夜景は言葉にならない美しさ。</div><div class="tl-tags"><span class="tl-tag">¥900</span></div></div>
+        </div>
+        <div class="tl-item">
+          <div class="tl-time"><div class="tl-time-val">20:30</div><div class="tl-time-sub">終了</div></div>
+          <div class="tl-line"><div class="tl-dot"></div></div>
+          <div class="tl-body"><div class="tl-spot">夕食 or 帰路</div><div class="tl-desc">MARK ISのレストランで夕食を楽しんで帰路へ。桜木町駅・みなとみらい駅いずれも近くアクセス便利。</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== グルメ ===== -->
+<section class="gourmet-section" id="gourmet">
+  <div class="container">
+    <div class="s-tag">GOURMET</div>
+    <h2 class="s-title">みなとみらい<em>グルメガイド</em></h2>
+    <p class="s-desc">シーン・予算別に厳選。港の風景と一緒に楽しむ食体験をご紹介。</p>
+    <div class="gourmet-filter" style="margin-top:24px;">
+      <button class="gf active" onclick="filterG('all',this)">すべて</button>
+      <button class="gf" onclick="filterG('date',this)">💑 デート・夜景</button>
+      <button class="gf" onclick="filterG('lunch',this)">☀️ ランチ</button>
+      <button class="gf" onclick="filterG('cafe',this)">☕ カフェ</button>
+      <button class="gf" onclick="filterG('local',this)">🏮 横浜名物</button>
+    </div>
+    <div class="gourmet-grid">
+      <div class="g-card show" data-cat="date">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=500&amp;auto=format&amp;fit=crop&amp;q=80" alt="夜景ダイニング" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-scene">デート・夜景</div>
+          <div class="g-name">スカイラウンジ（ランドマークタワー）</div>
+          <div class="g-area">📍 ランドマークタワー69F</div>
+          <div class="g-price">¥8,000〜 / 要予約</div>
+          <div class="g-tags"><span class="g-tag">夜景</span><span class="g-tag">フレンチ</span><span class="g-tag">記念日</span></div>
+        </div>
+      </div>
+      <div class="g-card show" data-cat="lunch">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=500&amp;auto=format&amp;fit=crop&amp;q=80" alt="シーフード" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-scene">ランチ</div>
+          <div class="g-name">横浜ハンマーヘッド レストラン</div>
+          <div class="g-area">📍 新港地区 客船ターミナル</div>
+          <div class="g-price">¥1,500〜</div>
+          <div class="g-tags"><span class="g-tag">海鮮</span><span class="g-tag">海景</span><span class="g-tag">テラス</span></div>
+        </div>
+      </div>
+      <div class="g-card show" data-cat="cafe">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=500&amp;auto=format&amp;fit=crop&amp;q=80" alt="カフェ" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-scene">カフェ</div>
+          <div class="g-name">赤レンガ倉庫 テラスカフェ</div>
+          <div class="g-area">📍 赤レンガ倉庫1号館・2号館</div>
+          <div class="g-price">¥700〜</div>
+          <div class="g-tags"><span class="g-tag">テラス</span><span class="g-tag">港景</span><span class="g-tag">映え</span></div>
+        </div>
+      </div>
+      <div class="g-card show" data-cat="local">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1496116218417-1a781b1c416c?w=500&amp;auto=format&amp;fit=crop&amp;q=80" alt="崎陽軒" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-scene">横浜名物</div>
+          <div class="g-name">崎陽軒 シウマイ・弁当</div>
+          <div class="g-area">📍 みなとみらい各所</div>
+          <div class="g-price">¥450〜</div>
+          <div class="g-tags"><span class="g-tag">横浜名物</span><span class="g-tag">お土産</span></div>
+        </div>
+      </div>
+      <div class="g-card show" data-cat="lunch">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&amp;auto=format&amp;fit=crop&amp;q=80" alt="クルーズランチ" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-scene">ランチ・特別</div>
+          <div class="g-name">ロイヤルウイング ランチクルーズ</div>
+          <div class="g-area">📍 大さん橋 発着</div>
+          <div class="g-price">¥4,500〜</div>
+          <div class="g-tags"><span class="g-tag">クルーズ</span><span class="g-tag">中華料理</span><span class="g-tag">特別体験</span></div>
+        </div>
+      </div>
+      <div class="g-card show" data-cat="date">
+        <div class="g-img"><img src="https://images.unsplash.com/photo-1544148103-0773bf10d330?w=500&amp;auto=format&amp;fit=crop&amp;q=80" alt="ディナー" loading="lazy"></div>
+        <div class="g-body">
+          <div class="g-scene">デート・夜景</div>
+          <div class="g-name">クイーンズスクエア レストランフロア</div>
+          <div class="g-area">📍 ランドマークタワー隣</div>
+          <div class="g-price">¥2,000〜</div>
+          <div class="g-tags"><span class="g-tag">多彩</span><span class="g-tag">ディナー</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="aff-banner">
+  <div class="aff-banner-inner">
+    <div class="aff-banner-left">
+      <span class="aff-pr">PR</span>
+      <span class="aff-icon">🏨</span>
+      <div>
+        <div class="aff-title">みなとみらい周辺のホテルをお得に予約しよう</div>
+        <div class="aff-sub">複数サイトで比較して最安値を見つけよう</div>
+      </div>
+    </div>
+    <div class="aff-btns">
+      <a href="https://hb.afl.rakuten.co.jp/hgc/529afa60.a8148527.529afa61.54d7ba9c/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="nofollow noopener" class="aff-btn aff-btn-rakuten">
+        <span class="aff-btn-logo">楽天</span>楽天トラベルで探す
+      </a>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1EPP+3YW1YQ+14CS+67JUA" target="_blank" rel="nofollow noopener" class="aff-btn aff-btn-jalan">
+        <span class="aff-btn-logo">じゃ</span>じゃらんで探す
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="aff-banner aff-banner-flight">
+  <div class="aff-banner-inner">
+    <div class="aff-banner-left">
+      <span class="aff-pr">PR</span>
+      <span class="aff-icon">✈️</span>
+      <div>
+        <div class="aff-title">横浜への航空券を検索しよう</div>
+        <div class="aff-sub">羽田・成田へのお得なフライトを比較</div>
+      </div>
+    </div>
+    <div class="aff-btns">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1EPP+4HCHPU+AD2+60WN6" target="_blank" rel="nofollow noopener" class="aff-btn aff-btn-airtrip">
+        ✈️ エアトリで航空券を探す
+      </a>
+    </div>
+  </div>
+</div>
+  </div>
+</section>
+
+<!-- ===== MAP + ACCESS ===== -->
+<section class="map-section" id="map">
+  <div class="map-header">
+    <div class="s-tag">ACCESS & MAP</div>
+    <h2 class="s-title">みなとみらいへの<em>アクセス</em></h2>
+    <p class="s-desc">複数路線でアクセス可能。みなとみらい線が最も便利。横浜駅からバスや徒歩でも行ける。</p>
+  </div>
+  <iframe
+    class="map-embed"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6558.31!2d139.626!3d35.4578!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185c1f4f93e1f7%3A0x6b66e64e2e4fb5b!2z44G_44Gq44Go44G_44KJ44GE21!5e0!3m2!1sja!2sjp!4v1680000000000"
+    allowfullscreen="" loading="lazy" title="みなとみらいマップ">
+  </iframe>
+  <div class="access-cards">
+    <div class="ac">
+      <span class="ac-icon">🚃</span>
+      <div class="ac-title">みなとみらい線</div>
+      <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>みなとみらい駅 下車すぐ</span><span class="ac-time">渋谷から約30分 / ¥290</span></div></div>
+      <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>横浜駅から4分</span><span class="ac-time">¥210</span></div></div>
+    </div>
+    <div class="ac">
+      <span class="ac-icon">🚂</span>
+      <div class="ac-title">JR・地下鉄</div>
+      <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>桜木町駅から徒歩5分</span><span class="ac-time">横浜駅から3分 / ¥150</span></div></div>
+      <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>市営地下鉄 桜木町駅</span><span class="ac-time">横浜駅から3分</span></div></div>
+    </div>
+    <div class="ac">
+      <span class="ac-icon">🚌</span>
+      <div class="ac-title">バス・シーバス</div>
+      <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>横浜駅から市営バス</span><span class="ac-time">約10分 / ¥220</span></div></div>
+      <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>シーバス（山下公園から）</span><span class="ac-time">約20分 / ¥800</span></div></div>
+    </div>
+    <div class="ac">
+      <span class="ac-icon">🚗</span>
+      <div class="ac-title">車・駐車場</div>
+      <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>首都高 横浜公園ICから約5分</span></div></div>
+      <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>MM21地区内に大型駐車場多数</span><span class="ac-time">土日祝は混雑注意</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 季節情報 ===== -->
+<section class="season-section" id="season">
+  <div class="container">
+    <div class="s-tag">SEASONAL INFO</div>
+    <h2 class="s-title">みなとみらい<em>季節情報</em></h2>
+    <p class="s-desc">1年中楽しめるみなとみらいだが、季節ごとに開催されるイベントで雰囲気が大きく変わる。</p>
+    <div class="season-grid">
+      <div class="season-card">
+        <div class="season-img"><img src="https://images.unsplash.com/photo-1522383225653-ed111181a951?w=400&amp;auto=format&amp;fit=crop&amp;q=80" alt="春" loading="lazy"></div>
+        <div class="season-body">
+          <span class="season-icon">🌸</span>
+          <div class="season-name">春（3〜5月）</div>
+          <span class="season-period">最も過ごしやすいシーズン</span>
+          <div class="season-event">大岡川の桜並木（3〜4月）、横浜フラワーフェスティバル（5月）。クルーズからの花見も人気。</div>
+        </div>
+      </div>
+      <div class="season-card">
+        <div class="season-img"><img src="https://images.unsplash.com/photo-1534430480872-3498386e7856?w=400&amp;auto=format&amp;fit=crop&amp;q=80" alt="夏" loading="lazy"></div>
+        <div class="season-body">
+          <span class="season-icon">🌊</span>
+          <div class="season-name">夏（6〜8月）</div>
+          <span class="season-period">花火・夜景が最高</span>
+          <div class="season-event">横浜ナイトフラワーズ（週末花火）、海上花火大会。夕暮れからの夜景クルーズが特に人気。</div>
+        </div>
+      </div>
+      <div class="season-card">
+        <div class="season-img"><img src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=400&amp;auto=format&amp;fit=crop&amp;q=80" alt="秋" loading="lazy"></div>
+        <div class="season-body">
+          <span class="season-icon">🍂</span>
+          <div class="season-name">秋（9〜11月）</div>
+          <span class="season-period">観光ベストシーズン</span>
+          <div class="season-event">過ごしやすい気候で観光に最適。赤レンガ倉庫周辺のイベントも多数。空気が澄んで展望台からの眺めも絶好。</div>
+        </div>
+      </div>
+      <div class="season-card">
+        <div class="season-img"><img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=400&amp;auto=format&amp;fit=crop&amp;q=80" alt="冬" loading="lazy"></div>
+        <div class="season-body">
+          <span class="season-icon">🎄</span>
+          <div class="season-name">冬（12〜2月）</div>
+          <span class="season-period">イルミネーションが最高潮</span>
+          <div class="season-event">ヨルノヨ（大規模光のショー）、赤レンガクリスマスマーケット（12月）。冬の澄んだ空気で夜景が最も美しい時期。</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 実用情報 ===== -->
+<section class="info-section" id="info">
+  <div class="container">
+    <div class="s-tag">PRACTICAL INFO</div>
+    <h2 class="s-title">知っておくと便利な<em>実用情報</em></h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-head">🎫 主要スポット料金</div>
+        <div class="info-body">
+          <div class="info-row"><span class="info-key">コスモクロック21</span><span class="info-val paid">大人¥900</span></div>
+          <div class="info-row"><span class="info-key">スカイガーデン展望台</span><span class="info-val paid">大人¥1,000</span></div>
+          <div class="info-row"><span class="info-key">横浜美術館（常設）</span><span class="info-val paid">大人¥500</span></div>
+          <div class="info-row"><span class="info-key">赤レンガ倉庫</span><span class="info-val free">入場無料</span></div>
+          <div class="info-row"><span class="info-key">大さん橋屋上</span><span class="info-val free">無料</span></div>
+          <div class="info-row"><span class="info-key">氷川丸（山下公園）</span><span class="info-val paid">大人¥300</span></div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-head">🕐 営業時間目安</div>
+        <div class="info-body">
+          <div class="info-row"><span class="info-key">コスモクロック21</span><span class="info-val">11:00〜21:00</span></div>
+          <div class="info-row"><span class="info-key">スカイガーデン</span><span class="info-val">10:00〜21:00</span></div>
+          <div class="info-row"><span class="info-key">横浜美術館</span><span class="info-val">10:00〜18:00</span></div>
+          <div class="info-row"><span class="info-key">赤レンガ倉庫</span><span class="info-val">10:00〜20:00</span></div>
+          <div class="info-row"><span class="info-key">MARK IS</span><span class="info-val">10:00〜21:00</span></div>
+          <div class="info-row"><span class="info-key">大さん橋屋上</span><span class="info-val">24時間</span></div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-head">💡 旅行者向けTIPS</div>
+        <div class="info-body">
+          <div class="info-row"><span class="info-key">ベストシーズン</span><span class="info-val">春・冬</span></div>
+          <div class="info-row"><span class="info-key">夜景ベストタイム</span><span class="info-val">日没後30分〜</span></div>
+          <div class="info-row"><span class="info-key">週末の混雑</span><span class="info-val">午前中が比較的空</span></div>
+          <div class="info-row"><span class="info-key">所要時間（目安）</span><span class="info-val">半日〜1日</span></div>
+          <div class="info-row"><span class="info-key">雨の日</span><span class="info-val">MARK IS・美術館</span></div>
+          <div class="info-row"><span class="info-key">荷物預け</span><span class="info-val">桜木町駅コインロッカー</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">YOKOHAMA</div>
+  <a href="index.html" class="footer-back">← 横浜旅行ガイドに戻る</a>
+  <div class="footer-bottom">© 2026 YOKOHAMA GUIDE. All rights reserved. | Photos: <a href="https://unsplash.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Unsplash</a> | 掲載情報は変更になる場合があります。公式サイトを必ずご確認ください。</div>
+</footer>
+
+<script>
+// コース切り替え
+function setCourse(id, btn) {
+  document.querySelectorAll('.ct').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.course-content').forEach(c => c.classList.remove('active'));
+  document.getElementById('course-' + id).classList.add('active');
+}
+
+// グルメフィルター
+function filterG(cat, btn) {
+  document.querySelectorAll('.gf').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.g-card').forEach(c => {
+    c.classList.toggle('show', cat === 'all' || c.dataset.cat === cat);
+  });
+}
+
+// ページナビ アクティブ
+const sections = document.querySelectorAll('section[id], div[id]');
+const navLinks = document.querySelectorAll('.pn');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+  navLinks.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === '#' + cur) a.classList.add('active');
+  });
+});
+
+// 言語切り替え（シンプル版）
+function setLang(l, btn) {
+  document.querySelectorAll('.lb').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const fm = {ja:"'DM Sans','Noto Sans JP',sans-serif",en:"'DM Sans',sans-serif",zh:"'DM Sans','Noto Sans SC',sans-serif",ko:"'DM Sans','Noto Sans KR',sans-serif"};
+  document.body.style.fontFamily = fm[l] || fm.ja;
+}
+</script>
+</body>
+</html>

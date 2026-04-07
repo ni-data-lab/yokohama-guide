@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GREEN×EXPO 2027 横浜花博 完全ガイド — YOKOHAMA GUIDE</title>
+<meta name="description" content="GREEN×EXPO 2027（横浜花博）のチケット・アクセス・見どころ・周辺ホテルを完全ガイド。2027年3月19日横浜・上瀬谷で開催。">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Sans+KR:wght@300;400;500&family=DM+Sans:wght@300;400;500;600&display=swap');
+:root{
+  --sky:#0ea5e9;--sky-light:#e0f2fe;--ocean:#0369a1;
+  --green:#10b981;--green-dark:#065f46;--green-mid:#059669;--green-light:#d1fae5;
+  --coral:#f97316;--sand:#fef3c7;
+  --white:#fff;--gray-light:#f1f5f9;--text:#0f172a;--muted:#64748b;
+  --shadow:0 4px 24px rgba(16,185,129,0.1);--shadow-lg:0 12px 48px rgba(16,185,129,0.18);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans','Noto Sans JP',sans-serif;color:var(--text);background:var(--white);overflow-x:hidden;}
+img{max-width:100%;height:auto;display:block;}
+
+header{position:fixed;top:0;left:0;right:0;z-index:200;background:rgba(255,255,255,0.95);backdrop-filter:blur(14px);border-bottom:1px solid rgba(16,185,129,0.15);height:58px;display:flex;align-items:center;padding:0 24px;gap:16px;box-shadow:0 2px 12px rgba(0,0,0,0.06);}
+.logo{font-family:'Playfair Display',serif;font-size:18px;font-weight:900;color:var(--ocean);text-decoration:none;}
+.logo em{color:var(--sky);font-style:normal;}
+.header-nav{display:flex;gap:2px;flex:1;justify-content:center;}
+.header-nav a{color:var(--muted);font-size:12px;font-weight:500;padding:5px 10px;border-radius:5px;text-decoration:none;transition:all 0.15s;white-space:nowrap;}
+.header-nav a:hover{background:var(--green-light);color:var(--green-dark);}
+.lang-sw{display:flex;gap:3px;flex-shrink:0;}
+.lb{font-size:10px;font-weight:700;padding:3px 7px;border:1px solid rgba(16,185,129,0.25);border-radius:4px;background:transparent;color:var(--muted);cursor:pointer;transition:all 0.15s;}
+.lb.active{background:var(--green);color:white;border-color:var(--green);}
+
+/* HERO */
+.hero{min-height:90vh;background:linear-gradient(160deg,var(--green-dark) 0%,#0d5c3a 40%,#1a7a52 100%);position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:100px 24px 80px;overflow:hidden;margin-top:58px;}
+.hero-flower-bg{position:absolute;inset:0;opacity:0.08;}
+.hero-flower-bg img{width:100%;height:100%;object-fit:cover;}
+.hero-content{position:relative;z-index:1;max-width:800px;}
+.hero-badge{display:inline-block;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.25);color:white;font-size:11px;font-weight:700;letter-spacing:0.12em;padding:5px 18px;border-radius:99px;margin-bottom:20px;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,7vw,72px);font-weight:900;color:white;line-height:1.05;margin-bottom:10px;text-shadow:0 2px 20px rgba(0,0,0,0.2);}
+.hero h1 em{color:#6ee7b7;font-style:normal;}
+.hero-official{font-size:14px;color:rgba(255,255,255,0.7);margin-bottom:28px;}
+.hero-sub{font-size:clamp(14px,2vw,17px);color:rgba(255,255,255,0.85);line-height:1.8;margin-bottom:40px;max-width:600px;margin-left:auto;margin-right:auto;}
+.countdown-section{margin-bottom:40px;}
+.countdown-label{font-size:12px;font-weight:700;letter-spacing:0.1em;color:rgba(255,255,255,0.6);text-transform:uppercase;margin-bottom:16px;}
+.countdown-boxes{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+.cd-box{background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:12px;padding:14px 20px;min-width:78px;}
+.cd-num{font-family:'Playfair Display',serif;font-size:38px;font-weight:900;color:white;display:block;line-height:1;}
+.cd-unit{font-size:10px;color:rgba(255,255,255,0.55);letter-spacing:0.08em;text-transform:uppercase;}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+.btn-primary{background:#6ee7b7;color:var(--green-dark);font-size:14px;font-weight:700;padding:13px 28px;border-radius:99px;text-decoration:none;transition:all 0.2s;}
+.btn-primary:hover{background:white;transform:translateY(-2px);}
+.btn-secondary{background:rgba(255,255,255,0.1);border:2px solid rgba(255,255,255,0.35);color:white;font-size:14px;font-weight:700;padding:13px 28px;border-radius:99px;text-decoration:none;transition:all 0.2s;}
+.btn-secondary:hover{background:rgba(255,255,255,0.2);transform:translateY(-2px);}
+
+.page-nav{background:white;border-bottom:2px solid var(--gray-light);position:sticky;top:58px;z-index:90;overflow-x:auto;}
+.page-nav-inner{max-width:1200px;margin:0 auto;display:flex;}
+.pn{padding:13px 20px;font-size:13px;font-weight:600;color:var(--muted);text-decoration:none;border-bottom:3px solid transparent;white-space:nowrap;transition:all 0.15s;display:block;}
+.pn:hover,.pn.active{color:var(--green);border-bottom-color:var(--green);}
+
+section{padding:64px 24px;}
+.container{max-width:1200px;margin:0 auto;}
+.s-tag{font-size:11px;font-weight:700;letter-spacing:0.12em;color:var(--green);text-transform:uppercase;margin-bottom:8px;}
+.s-title{font-family:'Playfair Display',serif;font-size:clamp(24px,4vw,36px);font-weight:900;color:var(--text);line-height:1.2;margin-bottom:12px;}
+.s-title em{color:var(--green);font-style:normal;}
+.s-desc{font-size:14px;color:var(--muted);line-height:1.8;max-width:640px;}
+
+/* チケット */
+.ticket-section{background:var(--green-dark);padding:64px 24px;}
+.ticket-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:32px;}
+.tk-card{background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:16px;padding:26px;transition:all 0.2s;}
+.tk-card:hover{background:rgba(255,255,255,0.13);transform:translateY(-3px);}
+.tk-card.featured{background:rgba(110,231,183,0.12);border-color:rgba(110,231,183,0.4);}
+.tk-type{font-size:11px;font-weight:700;letter-spacing:0.1em;color:#6ee7b7;text-transform:uppercase;margin-bottom:8px;}
+.tk-name{font-family:'Playfair Display',serif;font-size:20px;font-weight:900;color:white;margin-bottom:6px;}
+.tk-price{font-family:'Playfair Display',serif;font-size:32px;font-weight:900;color:#6ee7b7;margin-bottom:4px;}
+.tk-note{font-size:11px;color:rgba(255,255,255,0.55);margin-bottom:16px;}
+.tk-features{display:flex;flex-direction:column;gap:5px;}
+.tk-feature{font-size:12px;color:rgba(255,255,255,0.75);display:flex;align-items:center;gap:6px;}
+.tk-feature::before{content:'✓';color:#6ee7b7;font-weight:700;flex-shrink:0;}
+.ticket-btn{display:inline-flex;align-items:center;gap:6px;background:#6ee7b7;color:var(--green-dark);font-size:14px;font-weight:700;padding:12px 24px;border-radius:99px;text-decoration:none;transition:all 0.2s;margin-top:28px;}
+.ticket-btn:hover{background:white;transform:translateY(-2px);}
+
+/* 横長セクション */
+.hl-row{padding:52px 0;}
+.hl-row-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;max-width:1200px;margin:0 auto;padding:0 24px;}
+.hl-row-reverse{direction:rtl;}
+.hl-row-reverse>*{direction:ltr;}
+.hl-row-img{border-radius:16px;overflow:hidden;box-shadow:var(--shadow-lg);}
+.hl-row-img img{width:100%;height:360px;object-fit:cover;transition:transform 0.5s;}
+.hl-row-img:hover img{transform:scale(1.03);}
+.hl-row-num{font-family:'Playfair Display',serif;font-size:56px;font-weight:900;color:var(--green-light);line-height:1;margin-bottom:4px;}
+.hl-row-icon{font-size:32px;margin-bottom:8px;display:block;}
+.hl-row-name{font-family:'Playfair Display',serif;font-size:clamp(20px,2.5vw,26px);font-weight:900;color:var(--text);margin-bottom:14px;line-height:1.2;}
+.hl-row-desc{font-size:14px;color:#334155;line-height:1.85;margin-bottom:20px;}
+.hl-row-meta{display:flex;flex-direction:column;gap:7px;margin-bottom:20px;}
+.hl-meta-item{font-size:12px;color:var(--muted);}
+.hl-row-link{display:inline-flex;align-items:center;gap:6px;color:var(--green);font-size:13px;font-weight:700;padding:9px 18px;border-radius:8px;text-decoration:none;border:2px solid var(--green);transition:all 0.2s;}
+.hl-row-link:hover{background:var(--green);color:white;transform:translateY(-2px);}
+
+/* 来場ガイド */
+.visit-section{background:var(--gray-light);}
+.visit-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:28px;}
+.vs-card{background:white;border-radius:12px;padding:18px;box-shadow:var(--shadow);}
+.vs-season{font-family:'Playfair Display',serif;font-size:18px;font-weight:900;color:var(--green);margin-bottom:4px;}
+.vs-period{font-size:11px;color:var(--muted);margin-bottom:10px;display:block;}
+.vs-flower{font-size:24px;margin-bottom:8px;display:block;}
+.vs-desc{font-size:11px;color:var(--muted);line-height:1.7;margin-bottom:10px;}
+.vs-temp{background:var(--green-light);color:var(--green-dark);font-size:10px;font-weight:700;padding:3px 8px;border-radius:5px;display:inline-block;}
+
+/* アクセス */
+.ac-section{background:white;}
+.ac-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:32px;}
+.ac-map iframe{width:100%;height:360px;border:0;display:block;border-radius:14px;box-shadow:var(--shadow-lg);}
+.ac-cards{display:flex;flex-direction:column;gap:14px;}
+.ac-card{background:var(--gray-light);border-radius:12px;padding:18px 20px;}
+.ac-card-title{font-size:14px;font-weight:700;color:var(--ocean);margin-bottom:10px;display:flex;align-items:center;gap:7px;}
+.ac-row{display:flex;gap:8px;padding:7px 0;border-bottom:1px solid rgba(16,185,129,0.1);}
+.ac-row:last-child{border:none;}
+.ac-dot{width:7px;height:7px;border-radius:50%;background:var(--green);flex-shrink:0;margin-top:5px;}
+.ac-text{font-size:12px;color:var(--muted);line-height:1.6;}
+.ac-time{font-size:11px;color:var(--green);font-weight:700;display:block;margin-top:2px;}
+
+/* 周辺観光コンボ */
+.combo-section{background:var(--green-dark);padding:64px 24px;}
+.combo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;}
+.combo-card{background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:20px;transition:all 0.2s;}
+.combo-card:hover{background:rgba(255,255,255,0.12);}
+.combo-icon{font-size:28px;margin-bottom:10px;display:block;}
+.combo-name{font-size:14px;font-weight:700;color:white;margin-bottom:6px;}
+.combo-desc{font-size:12px;color:rgba(255,255,255,0.65);line-height:1.7;margin-bottom:10px;}
+.combo-time{font-size:11px;color:#6ee7b7;font-weight:600;}
+
+/* 実用情報 */
+.info-section{background:var(--gray-light);}
+.info-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:28px;}
+.info-card{background:white;border-radius:12px;overflow:hidden;box-shadow:var(--shadow);}
+.info-head{background:var(--green-dark);color:white;padding:14px 18px;font-size:13px;font-weight:700;}
+.info-body{padding:14px 18px;}
+.info-row{display:flex;justify-content:space-between;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--gray-light);font-size:12px;gap:8px;}
+.info-row:last-child{border:none;}
+.info-key{color:var(--muted);flex-shrink:0;}
+.info-val{font-weight:600;color:var(--text);text-align:right;}
+
+.ad-box{background:var(--sand);border:1px solid rgba(249,115,22,0.2);border-radius:12px;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;margin:24px 0;flex-wrap:wrap;}
+.ad-label{font-size:10px;color:var(--muted);letter-spacing:0.1em;text-transform:uppercase;}
+.ad-text{font-size:14px;font-weight:600;color:var(--text);}
+.ad-btn{background:var(--coral);color:white;font-size:13px;font-weight:700;padding:9px 20px;border-radius:99px;text-decoration:none;transition:all 0.15s;white-space:nowrap;}
+.ad-btn:hover{opacity:0.88;transform:translateY(-1px);}
+
+footer{background:#0f172a;color:rgba(255,255,255,0.6);padding:40px 24px 24px;text-align:center;}
+.footer-logo{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:white;margin-bottom:10px;}
+.footer-back{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7);font-size:13px;font-weight:500;padding:8px 18px;border-radius:99px;text-decoration:none;margin-bottom:20px;transition:all 0.15s;}
+.footer-back:hover{background:rgba(255,255,255,0.15);color:white;}
+.footer-bottom{font-size:11px;color:rgba(255,255,255,0.3);border-top:1px solid rgba(255,255,255,0.08);padding-top:14px;margin-top:16px;}
+
+@media(max-width:900px){
+  .ticket-grid{grid-template-columns:1fr;}
+  .hl-row-inner{grid-template-columns:1fr;gap:24px;}
+  .hl-row-reverse{direction:ltr;}
+  .hl-row-img img{height:240px;}
+  .visit-grid{grid-template-columns:1fr 1fr;}
+  .ac-grid{grid-template-columns:1fr;}
+  .combo-grid{grid-template-columns:1fr 1fr;}
+  .info-grid{grid-template-columns:1fr 1fr;}
+  .countdown-boxes{gap:10px;}
+  .cd-box{min-width:64px;}
+  .cd-num{font-size:30px;}
+  .header-nav{display:none;}
+}
+@media(max-width:600px){
+  .combo-grid,.info-grid{grid-template-columns:1fr;}
+  .visit-grid{grid-template-columns:1fr 1fr;}
+  .hero{padding:80px 20px 60px;}
+}
+
+/* ===== アフィリエイトバナー ===== */
+.aff-banner{background:linear-gradient(135deg,#fff8f0,#fff3e8);border:2px solid #f97316;border-radius:14px;padding:20px 24px;margin:32px 0;}
+.aff-banner-flight{background:linear-gradient(135deg,#f0f7ff,#e8f2ff);border-color:#0ea5e9;}
+.aff-banner-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.aff-banner-left{display:flex;align-items:center;gap:12px;}
+.aff-pr{font-size:10px;font-weight:700;letter-spacing:0.1em;color:#fff;background:#f97316;padding:2px 7px;border-radius:4px;flex-shrink:0;}
+.aff-banner-flight .aff-pr{background:#0ea5e9;}
+.aff-icon{font-size:32px;flex-shrink:0;}
+.aff-title{font-size:15px;font-weight:700;color:#0f172a;margin-bottom:3px;}
+.aff-sub{font-size:12px;color:#64748b;}
+.aff-btns{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0;}
+.aff-btn{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;padding:11px 20px;border-radius:99px;text-decoration:none;transition:all 0.2s;white-space:nowrap;}
+.aff-btn:hover{transform:translateY(-2px);opacity:0.92;}
+.aff-btn-logo{font-size:11px;font-weight:900;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+.aff-btn-rakuten{background:#bf0000;color:#fff;}
+.aff-btn-rakuten .aff-btn-logo{background:#fff;color:#bf0000;}
+.aff-btn-jalan{background:#f97316;color:#fff;}
+.aff-btn-jalan .aff-btn-logo{background:#fff;color:#f97316;}
+.aff-btn-airtrip{background:#0ea5e9;color:#fff;}
+@media(max-width:700px){
+  .aff-banner-inner{flex-direction:column;align-items:flex-start;}
+  .aff-btns{width:100%;}
+  .aff-btn{flex:1;justify-content:center;}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">YOKO<em>HAMA</em></a>
+  <nav class="header-nav">
+    <a href="#ticket">チケット</a>
+    <a href="#highlights">見どころ</a>
+    <a href="#visit">来場ガイド</a>
+    <a href="#access">アクセス</a>
+    <a href="#combo">周辺観光</a>
+    <a href="#info">実用情報</a>
+  </nav>
+  <div class="lang-sw">
+    <button class="lb active" onclick="setLang('ja',this)">JA</button>
+    <button class="lb" onclick="setLang('en',this)">EN</button>
+    <button class="lb" onclick="setLang('zh',this)">中文</button>
+    <button class="lb" onclick="setLang('ko',this)">한국어</button>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-flower-bg">
+    <img src="https://images.unsplash.com/photo-1745977562090-5c9d5c5a53fc?w=1600&amp;auto=format&amp;fit=crop&amp;q=80" alt="花博イメージ">
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">🌸 GREEN×EXPO 2027 特設ガイド</div>
+    <h1><em>横浜花博</em>2027<br>完全ガイド</h1>
+    <div class="hero-official">正式名称：2027年国際園芸博覧会（GREEN×EXPO 2027）</div>
+    <p class="hero-sub">2027年3月19日、横浜・上瀬谷で開幕。世界中の花と緑が集まる国際園芸博覧会。チケット・アクセス・見どころ・周辺観光を完全ガイド。</p>
+
+    <div class="countdown-section">
+      <div class="countdown-label">🌸 開幕カウントダウン</div>
+      <div class="countdown-boxes" id="countdown"></div>
+    </div>
+
+    <div class="hero-btns">
+      <a href="#ticket" class="btn-primary">チケットを確認する</a>
+      <a href="https://expo2027yokohama.or.jp/" target="_blank" rel="noopener" class="btn-secondary">公式サイトへ →</a>
+    </div>
+  </div>
+</div>
+
+<!-- PAGE NAV -->
+<div class="page-nav">
+  <div class="page-nav-inner">
+    <a href="#ticket" class="pn active">🎫 チケット</a>
+    <a href="#highlights" class="pn">🌸 見どころ</a>
+    <a href="#visit" class="pn">📅 来場ガイド</a>
+    <a href="#access" class="pn">🚃 アクセス</a>
+    <a href="#combo" class="pn">🗺️ 周辺観光</a>
+    <a href="#info" class="pn">ℹ️ 実用情報</a>
+  </div>
+</div>
+
+<!-- ===== チケット ===== -->
+<section class="ticket-section" id="ticket">
+  <div class="container">
+    <div class="s-tag" style="color:#6ee7b7;">TICKET INFO</div>
+    <h2 class="s-title" style="color:white;">チケット<em style="color:#6ee7b7;">料金・種類</em></h2>
+    <p class="s-desc" style="color:rgba(255,255,255,0.7);">2026年3月19日より前売り販売開始。早割チケットがお得。来場日時の予約はチケット購入後に別途必要。</p>
+
+    <div class="ticket-grid">
+      <div class="tk-card">
+        <div class="tk-type">前売り（早割）</div>
+        <div class="tk-name">1日券 大人</div>
+        <div class="tk-price">¥4,900</div>
+        <div class="tk-note">会期中の当日券¥5,500より¥600お得</div>
+        <div class="tk-features">
+          <div class="tk-feature">2026年3月19日〜販売開始</div>
+          <div class="tk-feature">電子チケット or 紙チケット（別途+¥100）</div>
+          <div class="tk-feature">来場日時の予約は別途</div>
+        </div>
+      </div>
+      <div class="tk-card featured">
+        <div class="tk-type">⭐ おすすめ</div>
+        <div class="tk-name">通期パス 大人</div>
+        <div class="tk-price">¥28,000</div>
+        <div class="tk-note">6回以上行くなら通期パスがお得</div>
+        <div class="tk-features">
+          <div class="tk-feature">会期中 何度でも入場可能</div>
+          <div class="tk-feature">季節ごとに変わる花を楽しめる</div>
+          <div class="tk-feature">地元在住者に特におすすめ</div>
+          <div class="tk-feature">当日券6回分（¥33,000）より大幅お得</div>
+        </div>
+      </div>
+      <div class="tk-card">
+        <div class="tk-type">当日券</div>
+        <div class="tk-name">1日券 料金表</div>
+        <div class="tk-price">¥5,500〜</div>
+        <div class="tk-note">年齢区分：大人（18歳以上）/ 中人（12〜17歳）/ 小人（4〜11歳）/ 3歳以下無料</div>
+        <div class="tk-features">
+          <div class="tk-feature">大人¥5,500 / 中人¥3,200</div>
+          <div class="tk-feature">小人¥1,500 / 3歳以下 無料</div>
+          <div class="tk-feature">夜間割引・障害者割引あり（詳細は公式で）</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center;margin-top:24px;">
+      <a href="https://expo2027yokohama.or.jp/ticket/" target="_blank" rel="noopener" class="ticket-btn">公式チケットサイトで購入する →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 見どころ ===== -->
+<section style="background:white;padding:56px 24px 0;" id="highlights">
+  <div class="container">
+    <div class="s-tag">HIGHLIGHTS</div>
+    <h2 class="s-title">花博2027の<em>見どころ</em></h2>
+    <p class="s-desc">国際園芸博覧会ならではの世界水準の展示が集まります。植物・テクノロジー・持続可能性をテーマに、多彩なゾーンが展開予定。</p>
+  </div>
+</section>
+
+<div class="hl-row" style="background:white;">
+  <div class="hl-row-inner">
+    <div class="hl-row-img">
+      <img src="https://images.unsplash.com/photo-1490750967868-88df5691cc8a?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="花と緑の展示" loading="lazy">
+    </div>
+    <div class="hl-row-body">
+      <div class="hl-row-num">01</div>
+      <span class="hl-row-icon">🌺</span>
+      <h3 class="hl-row-name">世界の花と緑の展示</h3>
+      <p class="hl-row-desc">世界各国から集められた花と緑が一堂に会する国際展示。参加国・機関のパビリオンでは各国の園芸文化を体験できます。四季折々に変わる花の景観は季節ごとに異なる表情を見せ、複数回来場しても飽きることがありません。開幕時には約40種600本の桜が咲き誇る春の景色からスタートします。</p>
+      <div class="hl-row-meta">
+        <span class="hl-meta-item">🌸 開幕時（3月）は桜が見頃</span>
+        <span class="hl-meta-item">🌻 夏は向日葵・ラベンダーなど夏の花が主役に</span>
+        <span class="hl-meta-item">🍂 秋は菊・コスモスなど秋の花が彩る</span>
+      </div>
+      <a href="https://expo2027yokohama.or.jp/about/" target="_blank" rel="noopener" class="hl-row-link">花博の概要を見る →</a>
+    </div>
+  </div>
+</div>
+
+<div class="hl-row" style="background:var(--gray-light);">
+  <div class="hl-row-inner hl-row-reverse">
+    <div class="hl-row-img">
+      <img src="https://images.unsplash.com/photo-1530018607912-eff2daa1bac4?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="テーマパビリオン" loading="lazy">
+    </div>
+    <div class="hl-row-body">
+      <div class="hl-row-num">02</div>
+      <span class="hl-row-icon">🏛️</span>
+      <h3 class="hl-row-name">日本館・テーマ展示</h3>
+      <p class="hl-row-desc">「幸せを創る明日の風景」をテーマに、日本の園芸・造園・農の文化を発信するテーマ展示ゾーン。植物と菌類の共生を紹介するシンボルゾーンや、東北6県の形を模した庭園など個性的な展示が予定されています。最先端のグリーンテクノロジーを体験できる展示も注目です。</p>
+      <div class="hl-row-meta">
+        <span class="hl-meta-item">🌱 「全ての生命はつながっている」がコンセプト</span>
+        <span class="hl-meta-item">🌿 奇跡の一本松の根も展示予定</span>
+        <span class="hl-meta-item">🤖 最新のグリーンテクノロジーも体験可能</span>
+      </div>
+      <a href="https://expo2027yokohama.or.jp/about/theme/" target="_blank" rel="noopener" class="hl-row-link">テーマ・コンセプトを見る →</a>
+    </div>
+  </div>
+</div>
+
+<div class="hl-row" style="background:white;">
+  <div class="hl-row-inner">
+    <div class="hl-row-img">
+      <img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&amp;auto=format&amp;fit=crop&amp;q=80" alt="食と農" loading="lazy">
+    </div>
+    <div class="hl-row-body">
+      <div class="hl-row-num">03</div>
+      <span class="hl-row-icon">🥗</span>
+      <h3 class="hl-row-name">食・農・マルシェ体験</h3>
+      <p class="hl-row-desc">花と緑だけでなく、食と農の展示・体験も充実。会場内では地元・全国各地の農産物を使った料理や、生産者から直接購入できるマルシェも開催予定です。野菜・果物の収穫体験ゾーンでは子どもたちが農業に親しむ機会も。食を通じた持続可能な社会のあり方を考えるコンテンツが豊富。</p>
+      <div class="hl-row-meta">
+        <span class="hl-meta-item">🍅 地元農産物のマルシェ開催予定</span>
+        <span class="hl-meta-item">👨‍🌾 農業体験プログラムも予定</span>
+        <span class="hl-meta-item">🍽️ 会場内レストランでは地産地消メニューも</span>
+      </div>
+      <a href="https://expo2027yokohama.or.jp/" target="_blank" rel="noopener" class="hl-row-link">公式サイトで最新情報を確認 →</a>
+    </div>
+  </div>
+</div>
+
+<div style="padding:0 24px;max-width:1200px;margin:0 auto;">
+  <div class="aff-banner">
+  <div class="aff-banner-inner">
+    <div class="aff-banner-left">
+      <span class="aff-pr">PR</span>
+      <span class="aff-icon">🏨</span>
+      <div>
+        <div class="aff-title">花博2027！横浜のホテルをお得に予約しよう</div>
+        <div class="aff-sub">複数サイトで比較して最安値を見つけよう</div>
+      </div>
+    </div>
+    <div class="aff-btns">
+      <a href="https://hb.afl.rakuten.co.jp/hgc/529afa60.a8148527.529afa61.54d7ba9c/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="nofollow noopener" class="aff-btn aff-btn-rakuten">
+        <span class="aff-btn-logo">楽天</span>楽天トラベルで探す
+      </a>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1EPP+3YW1YQ+14CS+67JUA" target="_blank" rel="nofollow noopener" class="aff-btn aff-btn-jalan">
+        <span class="aff-btn-logo">じゃ</span>じゃらんで探す
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="aff-banner aff-banner-flight">
+  <div class="aff-banner-inner">
+    <div class="aff-banner-left">
+      <span class="aff-pr">PR</span>
+      <span class="aff-icon">✈️</span>
+      <div>
+        <div class="aff-title">花博2027！横浜への航空券を検索しよう</div>
+        <div class="aff-sub">羽田・成田へのお得なフライトを比較</div>
+      </div>
+    </div>
+    <div class="aff-btns">
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1EPP+4HCHPU+AD2+60WN6" target="_blank" rel="nofollow noopener" class="aff-btn aff-btn-airtrip">
+        ✈️ エアトリで航空券を探す
+      </a>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ===== 来場ガイド ===== -->
+<section class="visit-section" id="visit">
+  <div class="container">
+    <div class="s-tag">VISIT GUIDE</div>
+    <h2 class="s-title">季節別<em>来場ガイド</em></h2>
+    <p class="s-desc">会期は2027年3月〜9月の約180日間。季節によって見られる花・混雑状況・おすすめポイントが異なります。</p>
+    <div class="visit-grid">
+      <div class="vs-card">
+        <span class="vs-flower">🌸</span>
+        <div class="vs-season">春</div>
+        <span class="vs-period">3月19日〜5月</span>
+        <div class="vs-desc">開幕シーズン。桜・チューリップ・バラが見頃。気候も穏やかで最も過ごしやすい。開幕直後は特に混雑が予想される。</div>
+        <span class="vs-temp">🌡️ 10〜20℃ / 混雑：高</span>
+      </div>
+      <div class="vs-card">
+        <span class="vs-flower">🌹</span>
+        <div class="vs-season">初夏</div>
+        <span class="vs-period">5月〜6月</span>
+        <div class="vs-desc">バラ・アジサイが見頃。気候がよく観光に最適。梅雨入り後は雨天対策を。比較的混雑が落ち着く時期。</div>
+        <span class="vs-temp">🌡️ 18〜25℃ / 混雑：中</span>
+      </div>
+      <div class="vs-card">
+        <span class="vs-flower">🌻</span>
+        <div class="vs-season">夏</div>
+        <span class="vs-period">7月〜8月</span>
+        <div class="vs-desc">ひまわり・ラベンダーが主役。屋外展示メインのため暑さ対策が必須。夜間開園（予定）は涼しく快適。</div>
+        <span class="vs-temp">🌡️ 28〜35℃ / 混雑：夏休み高</span>
+      </div>
+      <div class="vs-card">
+        <span class="vs-flower">🌼</span>
+        <div class="vs-season">初秋</div>
+        <span class="vs-period">9月（最終月）</span>
+        <div class="vs-desc">コスモス・菊などの秋の花。最終月のため混雑が予想。会期ラスト（9月末頃予定）は特に人が集まる見込み。</div>
+        <span class="vs-temp">🌡️ 22〜28℃ / 混雑：閉幕前高</span>
+      </div>
+    </div>
+    <div style="background:white;border-radius:14px;padding:20px 24px;margin-top:20px;box-shadow:var(--shadow);">
+      <div style="font-size:13px;font-weight:700;color:var(--green-dark);margin-bottom:10px;">💡 混雑を避けるポイント</div>
+      <div style="font-size:12px;color:var(--muted);line-height:1.8;">開幕直後（3月）・夏休み（7〜8月）・最終月は特に混雑が予想されます。平日の訪問がおすすめ。また、来場日時の予約制度があるため、公式サイトで事前に予約を完了してから来場しましょう。</div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== アクセス ===== -->
+<section class="ac-section" id="access">
+  <div class="container">
+    <div class="s-tag">ACCESS</div>
+    <h2 class="s-title">花博会場への<em>アクセス</em></h2>
+    <p class="s-desc">会場は横浜市瀬谷区・旭区の上瀬谷通信施設跡地。最寄りは相鉄線「瀬谷駅」からのシャトルバスが基本ルートです。</p>
+    <div class="ac-grid">
+      <div class="ac-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.5!2d139.5080!3d35.4570!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60185cfe7b2d!2z5LiK55yf5Ymy6YCa!5e0!3m2!1sja!2sjp!4v1680000000000" allowfullscreen="" loading="lazy" title="花博会場マップ"></iframe>
+      </div>
+      <div class="ac-cards">
+        <div class="ac-card">
+          <div class="ac-card-title">🚃 基本ルート（相鉄線）</div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>横浜駅から相鉄線で「瀬谷駅」へ</span><span class="ac-time">約15分 / ¥230</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>瀬谷駅からシャトルバスで会場へ</span><span class="ac-time">詳細は公式サイトで確認（会期前に発表予定）</span></div></div>
+        </div>
+        <div class="ac-card">
+          <div class="ac-card-title">🚃 都内からのルート</div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>新宿駅から相鉄・JR直通線 → 瀬谷駅</span><span class="ac-time">約35〜40分（直通）</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>渋谷駅から東急・相鉄直通 → 瀬谷駅</span><span class="ac-time">約30〜35分（直通）</span></div></div>
+        </div>
+        <div class="ac-card">
+          <div class="ac-card-title">🚗 車でのアクセス</div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>首都高速から横浜環状南線経由</span><span class="ac-time">駐車場情報は公式で確認</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>混雑期は公共交通機関の利用を推奨</span></div></div>
+        </div>
+        <div class="ac-card">
+          <div class="ac-card-title">⚠️ 重要・事前準備</div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>来場日時の事前予約が必要（公式サイトで）</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>チケット購入後に来場予約（別ステップ）</span></div></div>
+          <div class="ac-row"><div class="ac-dot"></div><div class="ac-text"><span>最新のアクセス情報は公式サイトを必ず確認</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 周辺観光コンボ ===== -->
+<section class="combo-section" id="combo">
+  <div class="container">
+    <div class="s-tag" style="color:#6ee7b7;">COMBINATION GUIDE</div>
+    <h2 class="s-title" style="color:white;">花博 × <em style="color:#6ee7b7;">横浜観光</em>おすすめコンボ</h2>
+    <p class="s-desc" style="color:rgba(255,255,255,0.7);">せっかく横浜に来るなら花博だけでなく横浜の人気スポットも一緒に楽しもう。</p>
+    <div class="combo-grid">
+      <div class="combo-card">
+        <span class="combo-icon">🌸+🥟</span>
+        <div class="combo-name">花博 × 中華街</div>
+        <div class="combo-desc">午前中に花博を楽しんで、午後はみなとみらい線で中華街へ。食べ歩きとランチで横浜グルメを満喫。</div>
+        <div class="combo-time">移動時間：横浜駅乗り換えで約40分</div>
+      </div>
+      <div class="combo-card">
+        <span class="combo-icon">🌸+🎡</span>
+        <div class="combo-name">花博 × みなとみらい</div>
+        <div class="combo-desc">花博で昼間を楽しみ、夕方以降にみなとみらいへ。ランドマークタワーや赤レンガ倉庫の夜景で締めくくり。</div>
+        <div class="combo-time">移動時間：横浜駅乗り換えで約20分</div>
+      </div>
+      <div class="combo-card">
+        <span class="combo-icon">🌸+🌹</span>
+        <div class="combo-name">花博 × 山下公園</div>
+        <div class="combo-desc">5月前後なら山下公園のバラ園と花博のダブル花見コース。横浜の花を一日で満喫できる贅沢なプラン。</div>
+        <div class="combo-time">移動時間：横浜駅乗り換えで約30分</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 実用情報 ===== -->
+<section class="info-section" id="info">
+  <div class="container">
+    <div class="s-tag">PRACTICAL INFO</div>
+    <h2 class="s-title">知っておきたい<em>実用情報</em></h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <div class="info-head">📅 開催概要</div>
+        <div class="info-body">
+          <div class="info-row"><span class="info-key">開催期間</span><span class="info-val">2027年3月19日〜9月末（予定）</span></div>
+          <div class="info-row"><span class="info-key">開催地</span><span class="info-val">横浜市瀬谷区・旭区</span></div>
+          <div class="info-row"><span class="info-key">会場</span><span class="info-val">上瀬谷通信施設跡地</span></div>
+          <div class="info-row"><span class="info-key">目標来場者数</span><span class="info-val">1,500万人以上</span></div>
+          <div class="info-row"><span class="info-key">開催時間</span><span class="info-val">9:30〜21:30（予定・変動あり）</span></div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-head">🎫 チケット</div>
+        <div class="info-body">
+          <div class="info-row"><span class="info-key">前売り大人（早割）</span><span class="info-val">¥4,900</span></div>
+          <div class="info-row"><span class="info-key">当日大人</span><span class="info-val">¥5,500</span></div>
+          <div class="info-row"><span class="info-key">通期パス大人</span><span class="info-val">¥28,000</span></div>
+          <div class="info-row"><span class="info-key">3歳以下</span><span class="info-val">無料</span></div>
+          <div class="info-row"><span class="info-key">前売り開始日</span><span class="info-val">2026年3月19日〜</span></div>
+        </div>
+      </div>
+      <div class="info-card">
+        <div class="info-head">💡 来場のポイント</div>
+        <div class="info-body">
+          <div class="info-row"><span class="info-key">事前予約</span><span class="info-val">来場日時の予約必須</span></div>
+          <div class="info-row"><span class="info-key">暑さ対策</span><span class="info-val">夏は帽子・日焼け止め必須</span></div>
+          <div class="info-row"><span class="info-key">歩きやすい靴</span><span class="info-val">広大な会場のため必須</span></div>
+          <div class="info-row"><span class="info-key">最新情報</span><span class="info-val">公式サイトを随時確認</span></div>
+          <div class="info-row"><span class="info-key">公式マスコット</span><span class="info-val">トゥンクトゥンク</span></div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px;">
+      <a href="https://expo2027yokohama.or.jp/" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;background:var(--green);color:white;font-size:14px;font-weight:700;padding:14px 32px;border-radius:99px;text-decoration:none;transition:all 0.2s;">公式サイトで最新情報を確認する →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 公式リンク・SNS ===== -->
+<section style="background:#f0fdf4;padding:56px 24px;">
+  <div style="max-width:860px;margin:0 auto;text-align:center;">
+    <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;color:#16a34a;text-transform:uppercase;margin-bottom:10px;">OFFICIAL</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(22px,3.5vw,32px);font-weight:800;color:#14532d;margin-bottom:8px;">公式サイト・<em style="color:#22c55e;font-style:normal;">SNS</em></h2>
+    <p style="font-size:14px;color:#4b5563;margin-bottom:36px;">最新情報は公式チャンネルで随時発信中。フォローして花博情報をいち早くチェック！</p>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;">
+      <a href="https://expo2027yokohama.or.jp/" target="_blank" rel="noopener"
+        style="display:inline-flex;align-items:center;gap:10px;background:#14532d;color:white;font-size:14px;font-weight:700;padding:13px 24px;border-radius:12px;text-decoration:none;transition:opacity 0.2s;">
+        🌿 公式サイト
+      </a>
+      <a href="https://x.com/expo2027_japan" target="_blank" rel="noopener"
+        style="display:inline-flex;align-items:center;gap:10px;background:#000;color:white;font-size:14px;font-weight:700;padding:13px 24px;border-radius:12px;text-decoration:none;transition:opacity 0.2s;">
+        𝕏 公式X（Twitter）
+      </a>
+      <a href="https://www.instagram.com/expo2027japan" target="_blank" rel="noopener"
+        style="display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);color:white;font-size:14px;font-weight:700;padding:13px 24px;border-radius:12px;text-decoration:none;transition:opacity 0.2s;">
+        📷 Instagram
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61551860066434" target="_blank" rel="noopener"
+        style="display:inline-flex;align-items:center;gap:10px;background:#1877f2;color:white;font-size:14px;font-weight:700;padding:13px 24px;border-radius:12px;text-decoration:none;transition:opacity 0.2s;">
+        Facebook
+      </a>
+      <a href="https://www.youtube.com/@expo2027japan" target="_blank" rel="noopener"
+        style="display:inline-flex;align-items:center;gap:10px;background:#ff0000;color:white;font-size:14px;font-weight:700;padding:13px 24px;border-radius:12px;text-decoration:none;transition:opacity 0.2s;">
+        ▶ YouTube
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">YOKOHAMA</div>
+  <a href="index.html" class="footer-back">← 横浜旅行ガイドに戻る</a>
+  <div class="footer-bottom">© 2026 YOKOHAMA GUIDE. All rights reserved. | Photos: <a href="https://unsplash.com" target="_blank" rel="noopener" style="color:rgba(255,255,255,0.4);text-decoration:underline;">Unsplash</a> | 花博の情報は変更になる場合があります。最新情報は必ず公式サイトをご確認ください。</div>
+</footer>
+
+<script>
+// カウントダウン
+function updateCountdown() {
+  const target = new Date('2027-03-19T09:30:00+09:00');
+  const now = new Date();
+  const diff = target - now;
+  const el = document.getElementById('countdown');
+  if (!el) return;
+  if (diff < 0) { el.innerHTML = '<div class="cd-box"><span class="cd-num">🌸</span><span class="cd-unit">OPEN</span></div>'; return; }
+  const d = Math.floor(diff / 86400000);
+  const h = Math.floor((diff % 86400000) / 3600000);
+  const m = Math.floor((diff % 3600000) / 60000);
+  const s = Math.floor((diff % 60000) / 1000);
+  el.innerHTML = `
+    <div class="cd-box"><span class="cd-num">${d}</span><span class="cd-unit">DAYS</span></div>
+    <div class="cd-box"><span class="cd-num">${h}</span><span class="cd-unit">HRS</span></div>
+    <div class="cd-box"><span class="cd-num">${m}</span><span class="cd-unit">MIN</span></div>
+    <div class="cd-box"><span class="cd-num">${s}</span><span class="cd-unit">SEC</span></div>
+  `;
+}
+updateCountdown();
+setInterval(updateCountdown, 1000);
+
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.pn');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) cur = s.id; });
+  navLinks.forEach(a => { a.classList.remove('active'); if (a.getAttribute('href') === '#' + cur) a.classList.add('active'); });
+});
+function setLang(l, btn) {
+  document.querySelectorAll('.lb').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  const fm = {ja:"'DM Sans','Noto Sans JP',sans-serif",en:"'DM Sans',sans-serif",zh:"'DM Sans','Noto Sans SC',sans-serif",ko:"'DM Sans','Noto Sans KR',sans-serif"};
+  document.body.style.fontFamily = fm[l] || fm.ja;
+}
+</script>
+</body>
+</html>
