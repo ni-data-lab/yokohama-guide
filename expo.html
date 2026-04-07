@@ -171,6 +171,31 @@ footer{background:#0f172a;color:rgba(255,255,255,0.6);padding:40px 24px 24px;tex
   .visit-grid{grid-template-columns:1fr 1fr;}
   .hero{padding:80px 20px 60px;}
 }
+
+/* ===== アフィリエイトバナー ===== */
+.aff-banner{background:linear-gradient(135deg,#fff8f0,#fff3e8);border:2px solid #f97316;border-radius:14px;padding:20px 24px;margin:32px 0;}
+.aff-banner-flight{background:linear-gradient(135deg,#f0f7ff,#e8f2ff);border-color:#0ea5e9;}
+.aff-banner-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.aff-banner-left{display:flex;align-items:center;gap:12px;}
+.aff-pr{font-size:10px;font-weight:700;letter-spacing:0.1em;color:#fff;background:#f97316;padding:2px 7px;border-radius:4px;flex-shrink:0;}
+.aff-banner-flight .aff-pr{background:#0ea5e9;}
+.aff-icon{font-size:32px;flex-shrink:0;}
+.aff-title{font-size:15px;font-weight:700;color:#0f172a;margin-bottom:3px;}
+.aff-sub{font-size:12px;color:#64748b;}
+.aff-btns{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0;}
+.aff-btn{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;padding:11px 20px;border-radius:99px;text-decoration:none;transition:all 0.2s;white-space:nowrap;}
+.aff-btn:hover{transform:translateY(-2px);opacity:0.92;}
+.aff-btn-logo{font-size:11px;font-weight:900;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;}
+.aff-btn-rakuten{background:#bf0000;color:#fff;}
+.aff-btn-rakuten .aff-btn-logo{background:#fff;color:#bf0000;}
+.aff-btn-jalan{background:#f97316;color:#fff;}
+.aff-btn-jalan .aff-btn-logo{background:#fff;color:#f97316;}
+.aff-btn-airtrip{background:#0ea5e9;color:#fff;}
+@media(max-width:700px){
+  .aff-banner-inner{flex-direction:column;align-items:flex-start;}
+  .aff-btns{width:100%;}
+  .aff-btn{flex:1;justify-content:center;}
+}
 </style>
 </head>
 <body>
@@ -348,11 +373,26 @@ footer{background:#0f172a;color:rgba(255,255,255,0.6);padding:40px 24px 24px;tex
 </div>
 
 <div style="padding:0 24px;max-width:1200px;margin:0 auto;">
-  <div class="ad-box">
-    <span class="ad-label">PR</span>
-    <span class="ad-text">花博会場周辺・横浜のホテルを早めに予約</span>
-    <a href="https://hb.afl.rakuten.co.jp/hgc/529afa60.a8148527.529afa61.54d7ba9c/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" class="ad-btn">楽天トラベルで探す →</a>
+  <div class="aff-banner">
+  <div class="aff-banner-inner">
+    <div class="aff-banner-left">
+      <span class="aff-pr">PR</span>
+      <span class="aff-icon">🏨</span>
+      <div>
+        <div class="aff-title">花博2027！横浜のホテルをお得に予約しよう</div>
+        <div class="aff-sub">複数サイトで比較して最安値を見つけよう</div>
+      </div>
+    </div>
+    <div class="aff-btns">
+      <a href="https://hb.afl.rakuten.co.jp/hgc/529afa60.a8148527.529afa61.54d7ba9c/?pc=https%3A%2F%2Ftravel.rakuten.co.jp%2F&amp;link_type=text&amp;ut=eyJwYWdlIjoidXJsIiwidHlwZSI6InRleHQiLCJjb2wiOjF9" target="_blank" rel="nofollow noopener" class="aff-btn aff-btn-rakuten">
+        <span class="aff-btn-logo">楽天</span>楽天トラベルで探す
+      </a>
+      <a href="https://px.a8.net/svt/ejp?a8mat=4B1EPP+3YW1YQ+14CS+67JUA" target="_blank" rel="nofollow noopener" class="aff-btn aff-btn-jalan">
+        <span class="aff-btn-logo">じゃ</span>じゃらんで探す
+      </a>
+    </div>
   </div>
+</div>
 </div>
 
 <!-- ===== 来場ガイド ===== -->
